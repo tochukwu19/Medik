@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from smarttemplates.net/medikit/dashboard__messages.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:42 GMT -->
+<!-- Mirrored from smarttemplates.net/medikit/dashboard__patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
@@ -9,8 +9,6 @@
 <meta name="description" content="medikit admin dashboard" />
 <meta name="keywords" content="medical dashboard, HTML UI KIT, medikit" />
 <title>Medik</title>
-<link rel="stylesheet" href="css/swiper.css">
-<link rel="stylesheet" href="css/jquery.scrollbar.css">
 <link rel="stylesheet" href="css/daterangepicker.css">
 <link rel="stylesheet" href="css/select2.css">
 <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
@@ -31,7 +29,7 @@
 			<nav class="sidebar-menu"> 
 				<ul>
 					<li class="dashboard"><a href="index.html"><b>Dashboard</b></a></li>
-				
+					
 					</li>
 					<li class="appointment"><a href="dashboard__appointments.html"><b>Appointments</b></a></li>
 					<li class="doctors has-submenu"><a href="#"><b>Doctors<span class="submenu-arrow"></span></b></a>
@@ -47,14 +45,14 @@
 							<li><a href="dashboard__patient.html">Patient profile</a></li>
 						</ul>
 					</li>		
-					<li class="inbox"><a href="dashboard__messages.html"><b>Messages<span class="submenu-bubble">3</span></b></a></li>
+					<li class="inbox"><a href="dashboard__messages.html"><b>Drugs</b></a></li>
 					<li class="settings"><a href="#"><b>Settings</b></a></li>
 				</ul>
 			</nav>
 	
 	</div>
 	
-	<!-- Section -->
+	<!-- Section sidebar -->
 	<div class="section section--content" id="content">
 		<header class="content-header">
 		
@@ -81,6 +79,9 @@
 			<div class="content-header__notifications content-header__dropdown">  
 			    <div class="content-header__notifications-icon content-header__icon content-header__dropdown-activate" data-dropdown="notificationsdropdown">
 					<img src="images/icons/icons-24-gray/notifications.png" alt="" title=""/>
+
+
+
 					<span class="content-header__icon-bubble">6</span>
 				</div>  
 				<nav class="dropdown-menu dropdown-menu--header dropdown-menu--notifications-menu" id="notificationsdropdown"> 			
@@ -107,7 +108,7 @@
 				<ul>
 				        <li><a href="#">Add new doctor</a></li>
 					<li><a href="#">Add new patient</a></li>
-					<li><a href="#">Generate reports</a></li>
+					<li><a href="#">Add a Drug</a></li>
 				</ul>
 				</nav>
 			</div>
@@ -116,9 +117,9 @@
 
 			<nav class="content-header__menu">       
 				<ul>
-					<li class="email selected modal-toggle" data-openpopup="email"><a href="#">Write new message</a></li>
+					<li class="user selected"><a href="dashboard__patients-add.html">Add new patient</a></li>
 					<li class="prescription modal-toggle" data-openpopup="prescription"><a href="#">Write a prescription</a></li>
-					<li class="reports modal-toggle" data-openpopup="reports"><a href="#">Generate report</a></li>
+					<li class="reports modal-toggle" data-openpopup="reports"><a href="#">Add a Drug</a></li>
 				</ul>
 			</nav>
 			
@@ -126,7 +127,7 @@
 		<div class="content-subheader">
 		
 			<div class="content-subheader__titles">
-					<h2 class="content-subheader__title">Messages</h2>
+					<h2 class="content-subheader__title">Drygs</h2>
 					<nav class="content-subheader__breadcrumb-menu">			
 							<ul>
 								<li><a href="dashboard.html">Dashboard</a></li>
@@ -137,213 +138,244 @@
 			
 			<div class="content-subheader__options">
 			
-					<div class="content-subheader__buttons">
-
-							<a href="#" class="button button--blue-border button--general">Delete Selected</a>
-					</div>
-			
-					<div class="content-subheader__switcher switcher">
-							<div class="switcher__buttons">
-								<div class="switcher__button switcher__button--enabled">All</div> 
-								<div class="switcher__button">Unread</div>
-								<div class="switcher__border"></div>
-							</div>
-					</div>
-					
-					<div class="content-subheader__dropdown" id="reportrange">
-						<span class="content-subheader__more show-more show-more--select show-more--select-gray"></span>
-					</div>
-			
-			</div>
-			
-		</div>
-		
-		<div class="messages">					  
-			<div class="messages__sidebar">
-				<div class="messages__header">
-					<form action="#">
-						<input type="text" name="searchinbox" class="form__input form__input--sm" value="" placeholder="Search in messages" />
-					</form>
-				</div>
-				<div class="messages__all scrollbar-macosx">
-					<div class="message__short new selected">
-						<div class="message__short-header">
-							<div class="messages__short-thumb"><img src="images/avatar-2.jpg" alt="" title=""/><span class="status status--online"></span></div>
-							<div class="messages__short-name">Gracie Morris</div>
-							<div class="messages__short-date">today</div>	
-						</div>
-						<div class="message__short-content">
-							<h4 class="messages__short-title">Medical consultation</h4>
-							<p class="messages__short-text">If you are interested in knowing which treatment has the most evidence ...</p>
-						</div>
-					</div>
-					
-					<div class="message__short new">
-						<div class="message__short-header">
-							<div class="messages__short-thumb"><img src="images/avatar-1.jpg" alt="" title=""/><span class="status status--online"></span></div>
-							<div class="messages__short-name">Oliver Barnes</div>
-							<div class="messages__short-date">yesterday</div>	
-						</div>
-						<div class="message__short-content">
-							<h4 class="messages__short-title">One medical information request</h4>
-							<p class="messages__short-text">I am unable to advise you as to whether it is a good formula...</p>
-						</div>
-					</div>
-					
-					<div class="message__short new">
-						<div class="message__short-header">
-							<div class="messages__short-thumb"><img src="images/avatar-4.jpg" alt="" title=""/><span class="status status--online"></span></div>
-							<div class="messages__short-name">Adam King</div>
-							<div class="messages__short-date">24.02.19</div>	
-						</div>
-						<div class="message__short-content">
-							<h4 class="messages__short-title">Eczema treatment</h4>
-							<p class="messages__short-text">Eczema at this age often has an allergic cause.</p>
-						</div>
-					</div>
-					
-					<div class="message__short">
-						<div class="message__short-header">
-							<div class="messages__short-thumb"><img src="images/avatar-5.jpg" alt="" title=""/><span class="status status--offline"></span></div>
-							<div class="messages__short-name">Sienna Butler</div>
-							<div class="messages__short-date">12.02.19</div>	
-						</div>
-						<div class="message__short-content">
-							<h4 class="messages__short-title">Sleep Disorder</h4>
-							<p class="messages__short-text">Not sure if it is a sleep problem but you definitely need to have an overnight sleep study</p>
-						</div>
-					</div>
-					
-					
-					<div class="message__short">
-						<div class="message__short-header">
-							<div class="messages__short-thumb"><img src="images/avatar-6.jpg" alt="" title=""/></div>
-							<div class="messages__short-name">Emma Williams</div>
-							<div class="messages__short-date">17.01.19</div>	
-						</div>
-						<div class="message__short-content">
-							<h4 class="messages__short-title">One medical information request</h4>
-							<p class="messages__short-text">I am unable to advise you as to whether it is a good formula...</p>
-						</div>
-					</div>
-					
-					<div class="message__short">
-						<div class="message__short-header">
-							<div class="messages__short-thumb"><img src="images/avatar-7.jpg" alt="" title=""/></div>
-							<div class="messages__short-name">Ava Jones</div>
-							<div class="messages__short-date">24.01.19</div>	
-						</div>
-						<div class="message__short-content">
-							<h4 class="messages__short-title">Chest radiology</h4>
-							<p class="messages__short-text">Eczema at this age often has an allergic cause.</p>
-						</div>
-					</div>
-					
-					<div class="message__short">
-						<div class="message__short-header">
-							<div class="messages__short-thumb"><img src="images/avatar-1.jpg" alt="" title=""/></div>
-							<div class="messages__short-name">Alexander Davies</div>
-							<div class="messages__short-date">05.01.19</div>	
-						</div>
-						<div class="message__short-content">
-							<h4 class="messages__short-title">General examination</h4>
-							<p class="messages__short-text">Not sure if it is a sleep problem but you definitely need to have an overnight sleep study</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="messages__details">
-				<div class="messages__header messages__header--details">
-				        <div class="messages__header-thumb"><img src="images/avatar-2.jpg" alt="" title=""/><span class="status status--online"></span></div>
-					<div class="messages__header-user">Gracie Morris</div>
-					<div class="messages__header-buttons">
-						<button class="button button--round"><img src="images/icons/icons-20-gray/refresh.png" alt="" title=""/></button>
-						<button class="button button--round"><img src="images/icons/icons-20-gray/checked.png" alt="" title=""/></button>
-						<button class="button button--round"><img src="images/icons/icons-20-gray/delete.png" alt="" title=""/></button>
-					</div>
-				</div>
-				<div class="messages__detailed scrollbar-macosx">
-
-				  <ul class="conversation">
-
-					  <li class="conversation__row conversation__row--received">
-						  <div class="conversation__avatar"><img src="images/avatar-2.jpg" alt="" title="" /></div>
-						  
-						  <div class="conversation__content">
-								<p>Hi Dr. Oliver, just wanted to let you know about my eczema. Small, raised bumps, which may leak fluid and crust over when scratched </p>
-							<span class="conversation__time">10:21 am</span>
-						  </div>
-						  
-					  </li>
-					  <li class="conversation__row conversation__row--sent">
-						  <div class="conversation__content">
-								<p>Hi Gracie!</p>
-							   <span class="conversation__time">8:32 am</span>
-						  </div>
-						  <div class="conversation__avatar"></span><img src="images/avatar-1.jpg" alt="" title="" /></div>
-					  </li>  
-					  <li class="conversation__row conversation__row--sent">
-						  <div class="conversation__content">
-								<p>No cure has been found for atopic dermatitis. But treatments and self-care measures can relieve itching and prevent new outbreaks. For example, it helps to avoid harsh soaps, moisturize your skin regularly, and apply medicated creams or ointments.</p>
-							   <span class="conversation__time">8:20 am</span>
-						  </div>
-						  <div class="conversation__avatar"></span><img src="images/avatar-1.jpg" alt="" title="" /></div>
-					  </li>  	  
-					  <li class="conversation__row conversation__row--received">
-						  <div class="conversation__avatar"></span><img src="images/avatar-2.jpg" alt="" title="" /></div>
-						  
-						  <div class="conversation__content">
-								<p>Red to brownish-gray patches, especially on the hands, feet, ankles, wrists, neck, upper chest, eyelids, inside the bend of the elbows and knees, and in infants, the face and scalp</p>
-							<span class="conversation__time">7:21 am</span>
-						  </div>
-						  
-					  </li>
-					  <li class="conversation__row conversation__row--received">
-						  <div class="conversation__avatar"><img src="images/avatar-2.jpg" alt="" title="" /></div>
-						  
-						  <div class="conversation__content">
-								<p>Thickened, cracked, scaly skin</p>
-							<span class="conversation__time">7:20 am</span>
-						  </div>
-						  
-					  </li>
-					  <li class="conversation__row conversation__row--sent">
-						  <div class="conversation__content">
-								<p>Atopic dermatitis most often begins before age 5 and may persist into adolescence and adulthood. For some people, it flares periodically and then clears up for a time, even for several years.</p>
-							   <span class="conversation__time">7:00 am</span>
-						  </div>
-						  <div class="conversation__avatar"><img src="images/avatar-1.jpg" alt="" title="" /></div>
-					  </li> 
-					  <li class="conversation__row conversation__row--received  conversation__row--undread">
-						  <div class="conversation__avatar"><img src="images/avatar-2.jpg" alt="" title="" /></div>
-						  
-						  <div class="conversation__content">
-								<p>Healthy skin helps retain moisture and protects you from bacteria, irritants and allergens. Eczema is related to a gene variation that affects the skin's ability to provide this protection. This allows your skin to be affected by environmental factors, irritants and allergens.</p>
-							<span class="conversation__time">7:21 am</span>
-						  </div>
-						  
-					  </li>  
-				  </ul>
-					
-					
-				</div>
-				<div class="messages__footer">
-			
-						<form action="#" class="messages__footer-form">
-							<textarea type="textarea" class="messages__footer-textarea" id="" name="" placeholder="Type your message..."></textarea>
-							<a href="#" class="messages__footer-submit"><img src="images/send.png" alt="" title="" /></a>
+					<div class="content-subheader__search">
+						<form>
+							<input type="text" class="subheader-search__input" id="" name="" value="" placeholder="Search drugs" />
+							<input type="submit" class="subheader-search__submit" value="Search" />
 						</form>
+					</div>
+					
+					<div class="content-subheader__dropdown">
+						<span class="content-subheader__more show-more show-more--select show-more--select-gray has-dropdown" data-dropdown="moreoptions">Filter Options</span>
+						<nav class="dropdown-menu dropdown-menu--content dropdown-menu--subheader" id="moreoptions"> 			
+							<ul>
+								<li><a href="#">By Date</a></li>
+								<li><a href="#">By Name</a></li>
+								<li><a href="#">By Date of birth</a></li>
+								<li><a href="#">+ Add filter</a></li>
+							</ul>
+						</nav>
+					</div>
+			
+			</div>
+			
+		</div>
 		
+
+		
+		<div class="grid grid--margin">
+			
+			<div class="grid__row">
+				<div class="grid__col grid__col--padding bg-white">
+					<div class="table table--patients">
+						<div class="table__header">
+							<div class="table__row">
+								<div class="table__cell"></div>
+								<div class="table__cell">NAME OF DRUG</div>
+								<div class="table__cell"></div>
+								<div class="table__cell">EXPIRY DATE</div>
+								<div class="table__cell">DESCRIPTION</div>
+								
+								<div class="table__cell"></div>
+								<div class="table__cell"></div>
+							</div>
+						</div>
+						<div class="table__body">
+							<div class="table__row">
+								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
+								<div class="table__cell">Ibuprofen</div>
+								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
+								<div class="table__cell">13/05/2024</div>
+								<div class="table__cell">Major Pain Relief</div>
+								<div class="table__cell"></div>
+								<div class="table__cell"></div>
+								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
+								<div class="table__cell">
+									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd1"></span>
+									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd1"> 			
+										<ul>
+											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Delete</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
+								<div class="table__cell">Acetaminophen
+								</div>
+								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
+								<div class="table__cell">13/05/2024</div>
+								<div class="table__cell">Major Pain Relief</div>
+								<div class="table__cell"></div>
+								<div class="table__cell"></div>
+								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
+								<div class="table__cell">
+									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd2"></span>
+									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd2"> 			
+										<ul>
+											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Delete</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							
+							<div class="table__row">
+								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
+								<div class="table__cell">Amoxicillin
+								</div>
+								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
+								<div class="table__cell">13/05/2024</div>
+								<div class="table__cell">Major Pain Relief</div>
+								<div class="table__cell"></div>
+								<div class="table__cell"></div>
+								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
+								<div class="table__cell">
+									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd3"></span>
+									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd3"> 			
+										<ul>
+											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Delete</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
+								<div class="table__cell">Cymbalta</div>
+								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
+								<div class="table__cell">13/05/2024</div>
+								<div class="table__cell">Major Pain Relief</div>
+								<div class="table__cell"></div>
+								<div class="table__cell"></div>
+								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
+								<div class="table__cell">
+									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd4"></span>
+									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd4"> 			
+										<ul>
+											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Delete</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							
+							<div class="table__row">
+								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
+								<div class="table__cell">Dupixent</div>
+								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
+								<div class="table__cell">13/05/2024</div>
+								<div class="table__cell">Major Pain Relief</div>
+								<div class="table__cell"></div>
+								<div class="table__cell"></div>
+								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
+								<div class="table__cell">
+									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd5"></span>
+									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd5"> 			
+										<ul>
+											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Delete</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
+								<div class="table__cell">Farxiga</div>
+								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
+								<div class="table__cell">13/05/2024</div>
+								<div class="table__cell">Major Pain Relief</div>
+								<div class="table__cell"></div>
+								<div class="table__cell"></div>
+								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
+								<div class="table__cell">
+									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd6"></span>
+									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd6"> 			
+										<ul>
+											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Delete</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							
+							<div class="table__row">
+								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
+								<div class="table__cell">Benzonatate</div>
+								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
+								<div class="table__cell">13/05/2024</div>
+								<div class="table__cell">Major Pain Relief</div>
+								<div class="table__cell"></div>
+								<div class="table__cell"></div>
+								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
+								<div class="table__cell">
+									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd5"></span>
+									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd5"> 			
+										<ul>
+											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Delete</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
+								<div class="table__cell">citalopram</div>
+								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
+								<div class="table__cell">13/05/2024</div>
+								<div class="table__cell">Major Pain Relief</div>
+								<div class="table__cell"></div>
+								<div class="table__cell"></div>
+								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
+								<div class="table__cell">
+									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd6"></span>
+									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd6"> 			
+										<ul>
+											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Delete</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+
+
+						</div>
+						
+					</div>
+					<!-- TABLE end -->
+				</div>
+
+			</div>
+			
+			<div class="grid__row">
+				<div class="grid__col grid__col--padding bg-white">
+					<ul class="pagination">
+						 <li><a href="#" class="pagination__current">1</a></li>
+						 <li><a href="#">2</a></li>
+						 <li><a href="#">3</a></li>
+						 <li><a href="#">4</a></li>
+						 <li><a href="#">5</a></li>
+						 <li><a href="#">NEXT</a></li>
+					</ul>
 				</div>
 			</div>
-		</div>
 
+		</div> <!-- End of Grid -->
 
 
 
 	</div>
 	
-</div> <!--  Wrap end -->
+</div> <!-- Wrap end -->
 
 <div class="section section-panel" id="panel">
 	<div class="panel-resize"></div>
@@ -475,15 +507,15 @@
 	</div>
 </div>  <!-- End of right panel -->
 
-  <!-- Modal - Email --> 
-<div class="modal modal--email">
+  <!-- Modal - Appointment --> 
+<div class="modal modal--appointment">
 		
 		<div class="modal__overlay modal__overlay--toggle"></div>
 		<div class="modal__wrapper modal-transition">
 		  
 		<div class="modal__body">
 			<div class="modal__header">
-				<h2 class="modal__header-title">Write a new message</h2>
+				<h2 class="modal__header-title">Make an appointment</h2>
 				<div class="modal__close modal__overlay--toggle"><span></span></div>
 			</div>
 			<div class="modal__content">					
@@ -491,12 +523,12 @@
 				<div class="grid">
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Message Information</h3>
+							<h3 class="grid__col-title">Patient Information</h3>
 						</div>		
 					</div>
 					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<label class="form__label">To:</label>
+						<div class="grid__col grid__col--13 grid__col--margin">
+							<label class="form__label">PATIENT NAME</label>
 							<select class="custom-select" name="appname">
 								<option value="Patient Name">Emma Williams</option>
 								<option value="Patient Name">Olivia Johnson</option>
@@ -540,24 +572,87 @@
 								<option value="Patient Name">Dylan Cooper</option>
 							</select>
 						</div>
+						<div class="grid__col grid__col--13 grid__col--margin">
+									<label class="form__label">DATE OR BIRTH</label>
+									<input type="text" name="birthday" class="form__input" value="02/03/1983" />
+						</div>
+						<div class="grid__col grid__col--13 grid__col--margin">
+									<label class="form__label">PHONE</label>
+									<input type="text" name="appphone" class="form__input" value="" />
+						</div>
 					</div>
-
-					<div class="grid__row grid__row--margin">
+					<div class="grid__row  grid__row--margin">
 						<div class="grid__col grid__col--margin">
-									<label class="form__label">SUBJECT</label>
-									<input type="text" name="subject" class="form__input" value="" />
+							<h3 class="grid__col-title">Appointment Information</h3>
+						</div>		
+					</div>
+					<div class="grid__row grid__row--margin">
+						<div class="grid__col grid__col--12 grid__col--margin">
+							<label class="form__label">LOCATION</label>
+							<select class="custom-select" name="applocation">
+								<option value="Los Angeles">H Clinic, Houston Street</option>
+								<option value="Washington">Hostpital Washington</option>
+								<option value="New York">Clinic 54 New York</option>
+								<option value="Chicago">43V Room Chicago</option>
+							</select>
+						</div>
+						<div class="grid__col grid__col--12 grid__col--margin">
+									<label class="form__label">DATE &amp; TIME</label>
+									<input type="text" name="timepicker" class="form__input" value="" />
 						</div>
 					</div>
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--margin">
-									<label class="form__label">MESSAGE</label>
-									<textarea name="message" class="form__textarea" placeholder="You message here"></textarea>
+							<h3 class="grid__col-title">Examination Information</h3>
+						</div>		
+					</div>
+					<div class="grid__row grid__row--margin">
+						<div class="grid__col grid__col--13 grid__col--margin">
+							<label class="form__label">EXAMINATION TYPE</label>
+							<select class="custom-select" name="apptype">
+								<option value="Examination">Abdominal radiology</option>
+								<option value="Examination">Breast imaging</option>
+								<option value="Examination">Cardiothoracic radiology</option>
+								<option value="Examination">Cardiovascular radiology</option>
+								<option value="Examination">Chest radiology</option>
+								<option value="Examination">Emergency radiology</option>
+								<option value="Examination">Endovascular surgical neuroradiology</option>
+								<option value="Examination">Gastrointestinal radiology</option>
+								<option value="Examination">Genitourinary radiology</option>
+								<option value="Examination">Head and neck radiology</option>
+								<option value="Examination">Interventional radiology</option>
+								<option value="Examination">Musculoskeletal radiology</option>
+								<option value="Examination">Neuroradiology</option>
+								<option value="Examination">Nuclear radiology</option>
+								<option value="Examination">Pediatric radiology</option>
+								<option value="Examination">Radiation oncology</option>
+								<option value="Examination">Vascular and interventional radiology</option>
+							</select>
 						</div>
-					</div>	
-
+						<div class="grid__col grid__col--13 grid__col--margin">
+									<label class="form__label">DOCTOR</label>
+									<select class="custom-select" name="apptype">
+										<option value="Patient Name">Dr. Alexander Davies</option>
+										<option value="Patient Name">Dr. William Evans</option>
+										<option value="Patient Name">Dr. Daniel Smith</option>
+										<option value="Patient Name">Dr. Jayden Taylor</option>
+										<option value="Patient Name">Dr. Oliver Thomas</option>
+										<option value="Patient Name">Dr. Carter Roberts</option>
+										<option value="Patient Name">Dr. Sebastian Walker</option>
+										<option value="Patient Name">Dr. Joseph Johnson</option>
+										<option value="Patient Name">Dr. David Thompson</option>
+										<option value="Patient Name">Dr. Gabriel Wood</option>
+										<option value="Patient Name">Dr. Julian Robinson</option>
+									</select>
+						</div>
+						<div class="grid__col grid__col--13 grid__col--margin">
+									<label class="form__label">NOTES</label>
+									<input name="notes" id="notes" class="form__input" type="text" />
+						</div>
+					</div>
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--margin">
-							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="SEND" />	
+							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD APPOINTMENT" />	
 						</div>
 					</div>
 				</div> <!-- End of Grid -->
@@ -732,7 +827,7 @@
 		  
 		<div class="modal__body">
 			<div class="modal__header">
-				<h2 class="modal__header-title">Generate report</h2>
+				<h2 class="modal__header-title">Add a Drug</h2>
 				<div class="modal__close modal__overlay--toggle"><span></span></div>
 			</div>
 			<div class="modal__content">					
@@ -745,107 +840,32 @@
 					</div>
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--13 grid__col--margin">
-							<label class="form__label">PATIENT NAME</label>
+							<label class="form__label">DRUG NAME</label>
 							<select class="custom-select" name="appname">
-								<option value="Patient Name">Emma Williams</option>
-								<option value="Patient Name">Olivia Johnson</option>
-								<option value="Patient Name">Ava Jones</option>
-								<option value="Patient Name">Isabella Brown</option>
-								<option value="Patient Name">Sophia Davis</option>
-								<option value="Patient Name">Mia Latin</option>
-								<option value="Patient Name">Amelia Miller</option>
-								<option value="Patient Name">Charlotte Wilson</option>
-								<option value="Patient Name">Abigail Moore</option>
-								<option value="Patient Name">Emily Anderson</option>
-								<option value="Patient Name">Harper Thomas</option>
-								<option value="Patient Name">Evelyn Jackson</option>
-								<option value="Patient Name">Madison Taylor</option>
-								<option value="Patient Name">Victoria White</option>
-								<option value="Patient Name">Sofia Harris</option>
-								<option value="Patient Name">Scarlett Martin</option>
-								<option value="Patient Name">Aria Thompson</option>
-								<option value="Patient Name">Elizabeth Robinson</option>
-								<option value="Patient Name">Camila Lewis</option>
-								<option value="Patient Name">Layla Garcia</option>
-								<option value="Patient Name">Ella Walker</option>
-								<option value="Patient Name">Chloe Clark</option>
-								<option value="Patient Name">Zoey Rodriguez</option>
-								<option value="Patient Name">Penelope Martinez</option>
-								<option value="Patient Name">Matthew Jones</option>
-								<option value="Patient Name">Benjamin Brown</option>
-								<option value="Patient Name">Alexander Davies</option>
-								<option value="Patient Name">William Evans</option>
-								<option value="Patient Name">Daniel Smith</option>
-								<option value="Patient Name">Jayden Taylor</option>
-								<option value="Patient Name">Oliver Thomas</option>
-								<option value="Patient Name">Carter Roberts</option>
-								<option value="Patient Name">Sebastian Walker</option>
-								<option value="Patient Name">Joseph Johnson</option>
-								<option value="Patient Name">David Thompson</option>
-								<option value="Patient Name">Gabriel Wood</option>
-								<option value="Patient Name">Julian Robinson</option>
-								<option value="Patient Name">Jackson Wright</option>
-								<option value="Patient Name">Anthony King</option>
-								<option value="Patient Name">Dylan Cooper</option>
+								<option value="Patient Name">Ibuprofen
+								</option>
+								<option value="Patient Name">Acetaminophen</option>
+								<option value="Patient Name">Amoxicillin</option>
+								<option value="Patient Name">Cymbalta</option>
+								<option value="Patient Name">Dupixent</option>
+								<option value="Patient Name">Farxiga</option>
+								<option value="Patient Name">Benzonatate</option>
+								<option value="Patient Name">Citalopram</option>
+							
 							</select>
 						</div>
 						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">DATE OR BIRTH</label>
+									<label class="form__label">EXPIRY DATE</label>
 									<input type="text" name="birthday" class="form__input" value="02/03/1983" />
 						</div>
 						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">PHONE</label>
+									<label class="form__label">DESCRIPTION</label>
 									<input type="text" name="appphone" class="form__input" value="" />
 						</div>
-					</div>
-					<div class="grid__row  grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Report Information</h3>
-						</div>		
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<label class="form__label">REPORT TYPE</label>
-							<select class="custom-select" name="applocation">
-									<option value="Diseases">Diseases report</option>
-									<option value="Activity">Activity report</option>
-							</select>
-						</div>
-						<div class="grid__col grid__col--12 grid__col--margin">
-									<label class="form__label">REPORT PERIOD</label>
-									<input type="text" name="dates" class="form__input" value="" />
-						</div>
-					</div>
+					
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Doctor Information</h3>
-						</div>		
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">Generated by Doctor</label>
-									<select class="custom-select" name="apptype">
-										<option value="Patient Name">Dr. Alexander Davies</option>
-										<option value="Patient Name">Dr. William Evans</option>
-										<option value="Patient Name">Dr. Daniel Smith</option>
-										<option value="Patient Name">Dr. Jayden Taylor</option>
-										<option value="Patient Name">Dr. Oliver Thomas</option>
-										<option value="Patient Name">Dr. Carter Roberts</option>
-										<option value="Patient Name">Dr. Sebastian Walker</option>
-										<option value="Patient Name">Dr. Joseph Johnson</option>
-										<option value="Patient Name">Dr. David Thompson</option>
-										<option value="Patient Name">Dr. Gabriel Wood</option>
-										<option value="Patient Name">Dr. Julian Robinson</option>
-									</select>
-						</div>
-						<div class="grid__col grid__col--23 grid__col--margin">
-									<label class="form__label">NOTES</label>
-									<input name="notes" id="notes" class="form__input" type="text" />
-						</div>
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="GENERATE REPORT" />							
+							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD A DRUG" />							
 						</div>
 					</div>
 				</div> <!-- End of Grid -->
@@ -860,13 +880,11 @@
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/moment.min.js"></script>
-<script src="js/daterangepicker.min.js"></script>
-<script src="js/jquery.scrollbar.js"></script>
-<script src="js/swiper.min.js"></script>
 <script src="js/select2.min.js"></script>
+<script src="js/daterangepicker.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/jquery.dashboard-custom.js"></script>
 </body>
 
-<!-- Mirrored from smarttemplates.net/medikit/dashboard__messages.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:43 GMT -->
+<!-- Mirrored from smarttemplates.net/medikit/dashboard__patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
 </html>

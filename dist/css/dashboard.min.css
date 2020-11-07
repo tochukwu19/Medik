@@ -2877,36 +2877,31 @@ h6 {
     align-items: center;
     padding: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px #f2f4f8 solid
+    border-bottom: 1px #f2f4f8 solid;
+    justify-content: space-around;
+    font-size: 16px;
+}
+.table__row{
+    justify-content: space-around;
 }
 .table--patients .table__body .table__row:hover {
     border-bottom: 1px #e5e7ee solid
 }
 .table--patients .table__cell:nth-child(1) {
-    flex: 0 0 50px;
+    flex: 0 0 10px;
     padding-right: 25px
 }
 .table--patients .table__cell:nth-child(2) {
-    flex: 0 0 12%
+    flex: 0 0 10px
 }
-.table--patients .table__cell:nth-child(3) {
-    flex: 0 0 100px
+.table__cell:nth-child(3) {
+    flex: 0 0 300px
 }
-.table--patients .table__cell:nth-child(4) {
-    flex: 0 0 12%
+
+.tabler2 div{
+    flex: 0 0 0px !important;
 }
-.table--patients .table__cell:nth-child(5) {
-    flex: 0 0 12%
-}
-.table--patients .table__cell:nth-child(6) {
-    flex: 0 0 12%
-}
-.table--patients .table__cell:nth-child(8) {
-    flex: 0 0 180px
-}
-.table--patients .table__cell:nth-child(9) {
-    flex: 0 0 25px
-}
+
 .table--patients .table__cell .specialization {
     background-color: #f2f4f8;
     padding: 5px 10px

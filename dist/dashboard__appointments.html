@@ -4,14 +4,13 @@
 <!-- Mirrored from smarttemplates.net/medikit/dashboard__appointments.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:39 GMT -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="author" content="SmartTemplates" />
 <meta name="description" content="medikit admin dashboard" />
 <meta name="keywords" content="medical dashboard, HTML UI KIT, medikit" />
 <title>Medik</title>
 <link rel="stylesheet" href="css/swiper.css">
 <link rel="stylesheet" href="css/jquery.scrollbar.css">
-<link rel="stylesheet" href="css/daterangepicker.css">
 <link rel="stylesheet" href="css/select2.css">
 <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
 <link rel="stylesheet" href="css/dashboard.min.css">
@@ -168,47 +167,8 @@
 					<td><img src='./images/ellipsis.png'/></td>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<td>Kr Editr</td>
-					<td>Mr Freuler</td>
-					<td>12/2/34</td>
-					<td>12 Noon</td>
-					<td>
-						<img src="./images/color-pencil.png"/>
-						<img src="./images/delete.png"
-					</td>
-				</tr>
-				<tr>
-					<td>Kr Editr</td>
-					<td>Mr Freuler</td>
-					<td>12/2/34</td>
-					<td>12 Noon</td>
-					<td>
-						<img src="./images/color-pencil.png"/>
-						<img src="./images/delete.png"
-					</td>
-				</tr>
-				<tr>
-					<td>Kr Editr</td>
-					<td>Mr Freuler</td>
-					<td>12/2/34</td>
-					<td>12 Noon</td>
-					<td>
-						<img src="./images/color-pencil.png"/>
-						<img src="./images/delete.png"
-					</td>
-				</tr>
-				<tr>
-					<td>Kr Editr</td>
-					<td>Mr Freuler</td>
-					<td>12/2/34</td>
-					<td>12 Noon</td>
-					<td>
-						<img src="./images/color-pencil.png"/>
-						<img src="./images/delete.png"
-					</td>
-				</tr>
+			<tbody class="table--body">
+				
 			</tbody>
 		</table>
 	</div>
@@ -357,7 +317,7 @@
 				<div class="modal__close modal__overlay--toggle"><span></span></div>
 			</div>
 			<div class="modal__content">					
-		
+			<form class="docForm">
 				<div class="grid">
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--margin">
@@ -367,56 +327,9 @@
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--13 grid__col--margin">
 							<label class="form__label">PATIENT NAME</label>
-							<select class="custom-select" name="appname">
-								<option value="Patient Name">Emma Williams</option>
-								<option value="Patient Name">Olivia Johnson</option>
-								<option value="Patient Name">Ava Jones</option>
-								<option value="Patient Name">Isabella Brown</option>
-								<option value="Patient Name">Sophia Davis</option>
-								<option value="Patient Name">Mia Latin</option>
-								<option value="Patient Name">Amelia Miller</option>
-								<option value="Patient Name">Charlotte Wilson</option>
-								<option value="Patient Name">Abigail Moore</option>
-								<option value="Patient Name">Emily Anderson</option>
-								<option value="Patient Name">Harper Thomas</option>
-								<option value="Patient Name">Evelyn Jackson</option>
-								<option value="Patient Name">Madison Taylor</option>
-								<option value="Patient Name">Victoria White</option>
-								<option value="Patient Name">Sofia Harris</option>
-								<option value="Patient Name">Scarlett Martin</option>
-								<option value="Patient Name">Aria Thompson</option>
-								<option value="Patient Name">Elizabeth Robinson</option>
-								<option value="Patient Name">Camila Lewis</option>
-								<option value="Patient Name">Layla Garcia</option>
-								<option value="Patient Name">Ella Walker</option>
-								<option value="Patient Name">Chloe Clark</option>
-								<option value="Patient Name">Zoey Rodriguez</option>
-								<option value="Patient Name">Penelope Martinez</option>
-								<option value="Patient Name">Matthew Jones</option>
-								<option value="Patient Name">Benjamin Brown</option>
-								<option value="Patient Name">Alexander Davies</option>
-								<option value="Patient Name">William Evans</option>
-								<option value="Patient Name">Daniel Smith</option>
-								<option value="Patient Name">Jayden Taylor</option>
-								<option value="Patient Name">Oliver Thomas</option>
-								<option value="Patient Name">Carter Roberts</option>
-								<option value="Patient Name">Sebastian Walker</option>
-								<option value="Patient Name">Joseph Johnson</option>
-								<option value="Patient Name">David Thompson</option>
-								<option value="Patient Name">Gabriel Wood</option>
-								<option value="Patient Name">Julian Robinson</option>
-								<option value="Patient Name">Jackson Wright</option>
-								<option value="Patient Name">Anthony King</option>
-								<option value="Patient Name">Dylan Cooper</option>
+							<select class="select-css selectEl1 name" required>
+								<option vlaue="">Select a patient</Select></option>
 							</select>
-						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">DATE OR BIRTH</label>
-									<input type="text" name="birthday" class="form__input" value="02/03/1983" />
-						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">PHONE</label>
-									<input type="text" name="appphone" class="form__input" value="" />
 						</div>
 					</div>
 					<div class="grid__row  grid__row--margin">
@@ -426,17 +339,16 @@
 					</div>
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--12 grid__col--margin">
-							<label class="form__label">LOCATION</label>
-							<select class="custom-select" name="applocation">
-								<option value="Los Angeles">H Clinic, Houston Street</option>
-								<option value="Washington">Hostpital Washington</option>
-								<option value="New York">Clinic 54 New York</option>
-								<option value="Chicago">43V Room Chicago</option>
-							</select>
+							<label class="form__label">NATURE OF APPOINTMENT</label>
+							<input type='text' class="form__input noa" required/>
 						</div>
-						<div class="grid__col grid__col--12 grid__col--margin">
-									<label class="form__label">DATE &amp; TIME</label>
-									<input type="text" name="timepicker" class="form__input" value="" />
+						<div class="grid__col grid__col--13 grid__col--margin">
+							<label class="form__label">DATE</label>
+							<input type="date" name="birthday" class="form__input date" required/>
+						</div>
+						<div class="grid__col grid__col--13 grid__col--margin">
+							<label class="form__label">TIME</label>
+							<input type="time" name="appphone" class="form__input time" required/>
 						</div>
 					</div>
 					<div class="grid__row grid__row--margin">
@@ -446,46 +358,14 @@
 					</div>
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--13 grid__col--margin">
-							<label class="form__label">EXAMINATION TYPE</label>
-							<select class="custom-select" name="apptype">
-								<option value="Examination">Abdominal radiology</option>
-								<option value="Examination">Breast imaging</option>
-								<option value="Examination">Cardiothoracic radiology</option>
-								<option value="Examination">Cardiovascular radiology</option>
-								<option value="Examination">Chest radiology</option>
-								<option value="Examination">Emergency radiology</option>
-								<option value="Examination">Endovascular surgical neuroradiology</option>
-								<option value="Examination">Gastrointestinal radiology</option>
-								<option value="Examination">Genitourinary radiology</option>
-								<option value="Examination">Head and neck radiology</option>
-								<option value="Examination">Interventional radiology</option>
-								<option value="Examination">Musculoskeletal radiology</option>
-								<option value="Examination">Neuroradiology</option>
-								<option value="Examination">Nuclear radiology</option>
-								<option value="Examination">Pediatric radiology</option>
-								<option value="Examination">Radiation oncology</option>
-								<option value="Examination">Vascular and interventional radiology</option>
-							</select>
-						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
 									<label class="form__label">DOCTOR</label>
-									<select class="custom-select" name="apptype">
-										<option value="Patient Name">Dr. Alexander Davies</option>
-										<option value="Patient Name">Dr. William Evans</option>
-										<option value="Patient Name">Dr. Daniel Smith</option>
-										<option value="Patient Name">Dr. Jayden Taylor</option>
-										<option value="Patient Name">Dr. Oliver Thomas</option>
-										<option value="Patient Name">Dr. Carter Roberts</option>
-										<option value="Patient Name">Dr. Sebastian Walker</option>
-										<option value="Patient Name">Dr. Joseph Johnson</option>
-										<option value="Patient Name">Dr. David Thompson</option>
-										<option value="Patient Name">Dr. Gabriel Wood</option>
-										<option value="Patient Name">Dr. Julian Robinson</option>
+									<select class="select-css selectEl2 doctor" name="apptype" required>
+										<option value="">Select a doctor</option>
 									</select>
 						</div>
 						<div class="grid__col grid__col--13 grid__col--margin">
 									<label class="form__label">NOTES</label>
-									<input name="notes" id="notes" class="form__input" type="text" />
+									<input name="notes" id="notes" class="form__input notes" type="text"  required/>
 						</div>
 					</div>
 					<div class="grid__row grid__row--margin">
@@ -493,7 +373,9 @@
 							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD APPOINTMENT" />	
 						</div>
 					</div>
-				</div> <!-- End of Grid -->
+				</div> 
+			</form>
+			<!-- End of Grid -->
 
 			</div> 
 
@@ -793,12 +675,133 @@
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/moment.min.js"></script>
-<script src="js/daterangepicker.min.js"></script>
 <script src="js/jquery.scrollbar.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/select2.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/jquery.dashboard-custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+<script>
+
+	// Getting apps
+	axios.get('https://guarded-headland-99483.herokuapp.com/appointments', {
+		headers: {}
+	})
+	.then((response) => {
+		var apps = response.data.data
+		console.log(apps);
+
+		for(let i=0; i<apps.length; i++){
+			let row = document.createElement('tr');
+
+			let body = document.querySelector('tbody')
+
+			let cell = document.createElement('td');
+			let textNode = document.createTextNode(apps[i].name.name);
+			let cell2 = document.createElement('td');
+			let textNode2 = document.createTextNode(apps[i].doctor.name);
+			let cell3 = document.createElement('td');
+			let textNode3 = document.createTextNode(apps[i].date);
+			let cell4 = document.createElement('td');
+			let textNode4 = document.createTextNode(apps[i].time);
+			let cell5 = document.createElement('td');
+			let img1 = document.createElement('img');
+			img1.src = "./images/color-pencil.png"
+			let img2 = document.createElement('img');
+			img2.src = "./images/delete.png"
+	
+			cell.appendChild(textNode);
+			cell2.appendChild(textNode2);
+			cell3.appendChild(textNode3);
+			cell4.appendChild(textNode4);
+			cell5.appendChild(img1)
+			cell5.appendChild(img2)
+
+			row.appendChild(cell); 
+			row.appendChild(cell2); 
+			row.appendChild(cell3);
+			row.appendChild(cell4);
+			row.appendChild(cell5)
+
+			body.append(row) 
+		}
+	})
+	.catch((error)=> {
+		console.log(error)
+	})
+
+
+	var patientData;
+
+	axios.get('https://guarded-headland-99483.herokuapp.com/patients', {
+		headers: {}
+	})
+	.then((response) => {
+		patientData = response.data.data
+		
+		var select = document.querySelector('.selectEl1');
+
+		for(let i=0; i<patientData.length; i++){
+
+			var opt = document.createElement('option');
+			opt.value = patientData[i]._id;
+			opt.innerHTML = patientData[i].name;
+			select.appendChild(opt);
+		}
+	})
+
+	var doctorData;
+
+	axios.get('https://guarded-headland-99483.herokuapp.com/doctors/all', {
+		headers: {}
+	})
+	.then((response) => {
+		doctorData = response.data.data		
+		var select = document.querySelector('.selectEl2');
+
+		for(let i=0; i<doctorData.length; i++){
+			var opt = document.createElement('option');
+			opt.value = doctorData[i]._id;
+			opt.innerHTML = doctorData[i].name;
+			select.appendChild(opt);
+		}
+	})
+	.catch((error)=> {
+		console.log(error)
+	})
+
+
+		// Posting data
+	const form = document.querySelector('.docForm');
+
+	form.addEventListener('submit', function(e){
+		console.log(e)
+		e.preventDefault();
+
+		const data = {
+			'name': document.querySelector(".name").value,
+			'time': document.querySelector(".time").value,
+			'doctor': document.querySelector(".doctor").value,
+			'note': document.querySelector(".notes").value,
+			'nature_of_appointment' : document.querySelector(".noa").value,
+			'date': document.querySelector(".date").value
+		}
+
+		axios.post('https://guarded-headland-99483.herokuapp.com/add/app', data, {
+			headers: { 
+				'Content-Type': 'application/json'
+			}
+		})
+		.then((response) => {
+		})
+		.then(()=> {
+			form.reset()
+		})
+		.catch((error)=> {
+		})
+	});
+
+</script>
 </body>
 
 <!-- Mirrored from smarttemplates.net/medikit/dashboard__appointments.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:39 GMT -->

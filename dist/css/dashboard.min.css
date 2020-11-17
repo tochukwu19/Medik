@@ -609,7 +609,7 @@ th, td{
     display: block
 }
 .grid__row--margin {
-    width: calc(100% - 25px * 2);
+    width: 75%;
     margin: 0 25px
 }
 .grid__row--padding {
@@ -3188,7 +3188,6 @@ input#file-upload-button{
     color: #9699a1
 }
 .form__input {
-    width: 98%;
     height: 25px;
     padding: 5px 1%;
     border: 1px solid #e5e7ee

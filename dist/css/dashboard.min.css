@@ -2169,10 +2169,11 @@ h6 {
 }
 .appointments__slide {
     width: calc((100% - 20px * 4 - 20px * 10)/ 5);
-    padding: 20px;
+    padding: 40px;
     margin-right: 20px;
     float: left;
-    background-color: #fbfbfc
+    background-color: #fbfbfc;
+    height: auto;
 }
 .appointments__slide:last-child {
     margin-right: 0

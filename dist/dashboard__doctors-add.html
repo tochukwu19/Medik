@@ -111,14 +111,6 @@
 			</div>
 			
 			<div class="mobile-submenu"></div>
-
-			<nav class="content-header__menu">       
-				<ul>
-					<li class="user selected"><a href="dashboard__doctors-add.html">Add new doctor</a></li>
-					<li class="prescription modal-toggle" data-openpopup="prescription"><a href="#">Write a prescription</a></li>
-					<li class="reports modal-toggle" data-openpopup="reports"><a href="#">Generate report</a></li>
-				</ul>
-			</nav>
 			
 		</header>
 		<div class="content-subheader">
@@ -136,25 +128,6 @@
 			
 			<div class="content-subheader__options">
 			
-					<div class="content-subheader__search">
-						<form>
-							<input type="text" class="subheader-search__input" id="" name="" value="" placeholder="Search patient" />
-							<input type="submit" class="subheader-search__submit" value="Search" />
-						</form>
-					</div>
-					
-					<div class="content-subheader__dropdown">
-						<span class="content-subheader__more show-more show-more--select show-more--select-gray has-dropdown" data-dropdown="moreoptions">Filter Options</span>
-						<nav class="dropdown-menu dropdown-menu--content dropdown-menu--subheader" id="moreoptions"> 			
-							<ul>
-								<li><a href="#">By Date</a></li>
-								<li><a href="#">By Name</a></li>
-								<li><a href="#">By Date of birth</a></li>
-								<li><a href="#">+ Add filter</a></li>
-							</ul>
-						</nav>
-					</div>
-			
 			</div>
 			
 		</div>
@@ -169,36 +142,55 @@
 				</div>		
 			</div>	
 			<form class="docForm">
+				<h2 class="display">User already exists</h2>
 			<div class="grid__row grid__row--margin">
-				
-				<div class="grid__col grid__col--13 grid__col--margin">
-					<div class="form-upload" id="dropzone">
-						<div class="form-upload__message dz-message needsclick">
-						Drop image here or click to upload.
-						</div>
-					</div>
+				<div class="grid__col grid__col--13 grid__col--margin fileInput">
+					<input type="file" class="fileInput2" required>
 				</div>
 				
 				<div class="grid__col grid__col--13 grid__col--margin">
 					<div class="grid__row">  
 						<div class="grid__col grid__col--margin">
-							<label class="form__label">FULL NAME *</label>
-							<input name="fname" id="fname" class="form__input required name" type="text" />	
+							<label class="form__label">FULL NAME</label>
+							<input name="fname" id="fname" class="form__input name" type="text" required/>	
 						</div>
 					</div>
 					<div class="grid__row">
 						<div class="grid__col grid__col--margin">
-							<label class="form__label">EMAIL *</label>
-							<input name="email" id="email" class="form__input required email" type="text" />	
+							<label class="form__label">EMAIL</label>
+							<input name="email" id="email" class="form__input email" type="email" required/>	
 						</div>
 					</div>
 				</div>
 				
 				<div class="grid__col grid__col--13 grid__col--margin">
 					<div class="grid__row">
-						<div class="grid__col grid__col--margin mb0">
+						<div class="grid__col grid__col--margin">
 							<label class="form__label">CATEGORY</label>
-							<input name="category" id="phone" class="form__input required category" type="text" />
+							<select class="selectEl select-css category" name="category" required>
+								<option value="">Select a category</option>
+							</select>
+						</div>
+					</div>
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<label class="form__label">PHONE</label>
+							<input name="phone" id="phone" class="form__input phone" type="tel" pattern="(^[0]\d{10}$)|(^[\+]?[234]\d{12}$)" placeholder="08012345678" required/>
+						</div>
+					</div>
+				</div>
+
+				<div class="grid__col grid__col--13 grid__col--margin">
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<label class="form__label">DOCTOR ID</label>
+							<input name="dId" class="form__input doctorId" type="number" required/>
+						</div>
+					</div>
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<label class="form__label">BIO</label>
+							<input name="bio" id="bio" class="form__input bio" type="text" required/>
 						</div>
 					</div>
 				</div>
@@ -800,69 +792,88 @@
 <script src="js/daterangepicker.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/jquery.dashboard-custom.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', event => {
 
-		function uuid() {
-			return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-				var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-				return v.toString(16);
-			});
-		}
+			// Get data
 
-		console.log(uuid())
+			var categoryData;
 
-		const firebaseConfig = {
-			apiKey: "AIzaSyBvY-e49qUhHiDuJvcDIssOqm1R8C9kkvc",
-			authDomain: "medik-36af4.firebaseapp.com",
-			projectId: "medik-36af4"
-		}
-
-		firebase.initializeApp(firebaseConfig)
-		const db = firebase.firestore()
-		
-		var docRef = db.collection("Doctor").doc("19mUZw3KUCHVENxpJWOn");
-
-		docRef.get().then(function(doc) {
-			if (doc.exists) {
-				console.log("Document data:", doc.data());
-			} else {
-				// doc.data() will be undefined in this case
-				console.log("No such document!");
-			}
-			}).catch(function(error) {
-				console.log("Error getting document:", error);
+			axios.get('https://guarded-headland-99483.herokuapp.com/category', {
+				headers: {}
 			})
+			.then((response) => {
+				categoryData = response.data.data
+				console.log(categoryData);
+				
+				var select = document.querySelector('.selectEl');
 
-			const form = document.querySelector('.docForm');
-			form.addEventListener('submit', function(e){
-			console.log(e)
+				for(let i=0; i<categoryData.length; i++){
+					console.log(categoryData[i].name)
 
-			db.collection("Doctor").doc("19mUZw3KUCHVENxpJWOn").update({
-				[uuid()]: {
-					name: document.querySelector(".name").value,
-					category: document.querySelector(".category").value,
-					biodata: document.querySelector(".email").value
+					var opt = document.createElement('option');
+					opt.value = categoryData[i]._id;
+					opt.innerHTML = categoryData[i].name;
+					select.appendChild(opt);
 				}
 			})
-			.then(function() {
-				console.log("Document successfully written!");
-				document.querySelector(".name").value = ""
-				document.querySelector(".email").value = ""
-				document.querySelector(".category").value = ""
+			.catch((error)=> {
+				console.log(error)
 			})
-			.catch(function(error) {
-				console.error("Error writing document: ", error);
+
+
+			// Posting data
+			const form = document.querySelector('.docForm');
+
+			form.addEventListener('submit', function(e){
+				console.log(e)
+				e.preventDefault();
+
+				let data = new FormData();
+
+				// Getting values
+				var file = document.querySelector(".fileInput2").files[0]
+				var name = document.querySelector(".name").value
+				var email = document.querySelector(".email").value
+				var phone_no = document.querySelector(".phone").value
+				var bio = document.querySelector(".bio").value
+				var category = document.querySelector(".category").value
+				var doctor_id = document.querySelector(".doctorId").value
+
+				data.append('name', name);
+				data.append('email', email);
+				data.append('phone_no', phone_no);
+				data.append('bio', bio);
+				data.append('category', category);
+				data.append('doctor_id', doctor_id);
+				data.append('image', file);
+			
+				console.log(...data)
+
+				axios.post('https://guarded-headland-99483.herokuapp.com/add/doctor', data, {
+					headers: { 
+						'Content-Type': 'multipart/form-data'
+					}
+				})
+				.then((response) => {
+					console.log(response);
+				})
+				.then(()=> {
+					form.reset()
+					document.querySelector('.display').classList.remove('nDisplay')
+				})
+				.catch((error)=> {
+					console.log(error)
+					if(error){
+						document.querySelector('.display').classList.add('nDisplay')
+					}
+				})
 			});
 
-			e.preventDefault();
-		});
 	});
 
 </script>
 </body>
 
-<!-- Mirrored from smarttemplates.net/medikit/dashboard__doctors-add.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
 </html>

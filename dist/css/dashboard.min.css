@@ -226,6 +226,108 @@ table {
 .bg-red {
     background-color: #e33d55
 }
+.display{
+    display: none;
+}
+
+.nDisplay{
+    display: block;
+    margin: auto;
+    width: auto;
+    text-align: center;
+    font-size: 17px;
+    color: red;
+}
+
+.select-css {
+    font-size: 15px;
+    font-family: inherit;
+    color: #9699a1;
+    padding: .6em 1.4em .5em .8em;
+    width: 95%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #eee;
+    appearance: none;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+    display: none;
+}
+/* Hover style */
+.select-css:hover {
+    border-color: #888;
+}
+/* Focus style */
+.select-css:focus {
+    border-color: #aaa;
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; 
+    outline: none;
+}
+
+/* Set options to normal weight */
+.select-css option {
+    font-weight:normal;
+}
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
+    background-position: left .7em top 50%, 0 0;
+    padding: .6em .8em .5em 1.4em;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 30px auto;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.table-head {
+    color: #9699a1;
+}
+
+td img{
+    cursor: pointer;
+    height: 20px;
+}
+
+td,
+th {
+    text-align: center;
+}
+
+tr {
+    height: 20px;
+    text-align: center;
+}
+
+tr:nth-child(2n){
+    background-color: #f4f7fc;
+}
+
+th, td{
+    padding: 15px;
+}
+
+.table .default {
+    background: #e8f1f9;
+}
+
+.default{
+    border-bottom: 20px solid #fff;
+}
+
+.table{
+    height: 20px;
+}
+
+  
+
 .appointment__button,
 .appointment__time,
 .appointments__slide,
@@ -519,7 +621,7 @@ table {
     position: relative
 }
 .grid__col--padding {
-    padding: 25px
+    padding: 5px
 }
 .grid__col--margin {
     margin-right: 25px;
@@ -1423,7 +1525,7 @@ h6 {
 .section--content {
     flex: 1;
     overflow: auto;
-    background-color: #f2f4f8;
+    background-color: #fff;
     position: relative
 }
 .content-header {
@@ -2905,6 +3007,31 @@ h6 {
 .table--patients .table__cell .specialization {
     background-color: #f2f4f8;
     padding: 5px 10px
+}
+
+.fileInput{
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    color: inherit;
+}
+
+.fileInput2{
+    font-size: inherit;
+    font-family: inherit;
+    color: #9699a1;
+}
+
+.fileInput2::-webkit-file-upload-button {
+    background: transparent;
+    border: 1px solid #9699a1;
+    color: #9699a1;
+    border-radius: .25rem;
+    padding: .6em;
+ }
+
+input#file-upload-button{
+    width: 300px;
 }
 @media screen and(max-width:1440px) {
     .table--patients .table__body .table__row {

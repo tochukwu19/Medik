@@ -4,7 +4,7 @@
 <!-- Mirrored from smarttemplates.net/medikit/dashboard__doctors.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="author" content="SmartTemplates" />
 <meta name="description" content="medikit admin dashboard" />
 <meta name="keywords" content="medical dashboard, HTML UI KIT, medikit" />
@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="css/select2.css">
 <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
 <link rel="stylesheet" href="css/dashboard.min.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css" />
 </head>
 <body>
 
@@ -138,7 +139,7 @@
 					<div class="content-subheader__search">
 						<form>
 							<input type="text" class="subheader-search__input" id="" name="" value="" placeholder="Search patient" />
-							<input type="submit" class="subheader-search__submit" value="Search" />
+							<input type="submit" class="subheader-search__submit filter" value="Search" />
 						</form>
 					</div>
 					
@@ -163,39 +164,25 @@
 		<div class="grid grid--margin">
 			
 			<div class="grid__row">
-				<div class="grid__col grid__col--padding bg-white">
-					<div class="table table--patients">
-						<div class="table__header">
-							<div class="table__row tabler2">
-								<div class="table__cell"></div>
-								<div class="table__cell">NAME</div>
-								<div class="table__cell">CATEGORY</div>
-								<div class="table__cell">EMAIL</div>
-								<div class="table__cell"></div>
-							</div>
-						</div>
-						<div class="table__body">
-							
-						</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<td>NAME</td>
+								<td>CATEGORY</td>
+								<td>EMAIL</td>
+							</tr>
+						</thead>
+						<tbody class="table__body">
 						
+						</tbody>
+					</table>
 					</div>
 					<!-- TABLE end -->
 				</div>
 
 			</div>
-			
-			<div class="grid__row">
-				<div class="grid__col grid__col--padding bg-white">
-					<ul class="pagination">
-						 <li><a href="#" class="pagination__current">1</a></li>
-						 <li><a href="#">2</a></li>
-						 <li><a href="#">3</a></li>
-						 <li><a href="#">4</a></li>
-						 <li><a href="#">5</a></li>
-						 <li><a href="#">NEXT</a></li>
-					</ul>
-				</div>
-			</div>
+
+			<div class="pagination"></div>
 
 		</div> <!-- End of Grid -->
 
@@ -475,7 +462,7 @@
 						</div>
 						<div class="grid__col grid__col--13 grid__col--margin">
 									<label class="form__label">NOTES</label>
-									<input name="notes" id="notes" class="form__input" type="text" />
+									<input name="notes" class="form__input" type="text" />
 						</div>
 					</div>
 					<div class="grid__row grid__row--margin">
@@ -627,7 +614,7 @@
 						</div>
 						<div class="grid__col grid__col--23 grid__col--margin">
 									<label class="form__label">NOTES</label>
-									<input name="notes" id="notes" class="form__input" type="text" />
+									<input name="notes" class="form__input" type="text" />
 						</div>
 					</div>
 					<div class="grid__row grid__row--margin">
@@ -763,7 +750,7 @@
 						</div>
 						<div class="grid__col grid__col--23 grid__col--margin">
 									<label class="form__label">NOTES</label>
-									<input name="notes" id="notes" class="form__input" type="text" />
+									<input name="notes" class="form__input" type="text" />
 						</div>
 					</div>
 					<div class="grid__row grid__row--margin">
@@ -787,43 +774,29 @@
 <script src="js/daterangepicker.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/jquery.dashboard-custom.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', event => {
 
-		const firebaseConfig = {
-			apiKey: "AIzaSyBvY-e49qUhHiDuJvcDIssOqm1R8C9kkvc",
-			authDomain: "medik-36af4.firebaseapp.com",
-			projectId: "medik-36af4"
-		}
+			axios.get('https://guarded-headland-99483.herokuapp.com/doctors/all', {
+				headers: {}
+			})
+			.then((response) => {
+				var doctors = response.data.data
+				console.log(doctors);
 
-		firebase.initializeApp(firebaseConfig)
-		const db = firebase.firestore()
-		
-		var docRef = db.collection("Doctor").doc("19mUZw3KUCHVENxpJWOn");
+				for(let i=0; i<doctors.length; i++){
+					let row = document.createElement('tr');
 
-		docRef.get().then(function(doc) {
-			if (doc.exists) {
-				const data = doc.data()
+					let body = document.querySelector('tbody')
 
-				for(ar in data){
-					console.log(data[ar].name)
-
-					let row = document.createElement('div');
-					row.classList.add("table__row")
-
-					let body = document.querySelector('.table__body')
-
-					let cell = document.createElement('div');
-					cell.classList.add("table__cell")
-					let textNode = document.createTextNode(data[ar].name);
-					let cell2 = document.createElement('div');
-					cell2.classList.add("table__cell")
-					let textNode2 = document.createTextNode(data[ar].category);
-					let cell3 = document.createElement('div');
-					cell3.classList.add("table__cell")
-					let textNode3 = document.createTextNode(data[ar].biodata);
+					let cell = document.createElement('td');
+					let textNode = document.createTextNode(doctors[i].name);
+					let cell2 = document.createElement('td');
+					let textNode2 = document.createTextNode(doctors[i].category.name);
+					let cell3 = document.createElement('td');
+					let textNode3 = document.createTextNode(doctors[i].email);
 			
 					cell.appendChild(textNode);
 					cell2.appendChild(textNode2);
@@ -834,17 +807,12 @@
 					row.appendChild(cell3);
 
 					body.append(row) 
-
-					console.log(row)
 				}
-
-			} else {
-				// doc.data() will be undefined in this case
-				console.log("No such document!");
-			}
-			}).catch(function(error) {
-				console.log("Error getting document:", error);
 			})
+			.catch((error)=> {
+				console.log(error)
+			})
+
 	});
 
 </script>

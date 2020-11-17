@@ -171,10 +171,10 @@
 			<form>
 			<div class="grid__row grid__row--margin">
 				
-				<div class="grid__col grid__col--13 grid__col--margin">
+				<div class="grid__row grid__col--10 grid__col--margin">
 					<div class="form-upload" id="dropzone">
 						<div class="form-upload__message dz-message needsclick">
-						Drop image here or click to upload.
+							Drop image here or click to upload.
 						</div>
 					</div>
 				</div>
@@ -207,7 +207,7 @@
 					<div class="grid__row">
 						<div class="grid__col grid__col--margin mb0">
 							<label class="form__label">LANGUAGES</label>
-							<select class="custom-select" name="languages" multiple="multiple">
+							<select class="custom-select" id="language-select" name="languages" multiple="multiple">
 								<option value="English">English</option>
 								<option value="French">French</option>
 								<option value="German">German</option>
@@ -238,7 +238,7 @@
 							<input type="text" name="birthday" class="form__input" value="02/03/1983" />
 						</div>
 					</div>
-					<div class="grid__row">
+					<!-- <div class="grid__row">
 						<div class="grid__col grid__col--margin mb0">
 							<label class="form__label">NATIONALITY</label>
 							<select class="custom-select" name="nationality">
@@ -488,12 +488,11 @@
 					</div>
 				</div>
 				      
-			</div>
+			</div> -->
 			
-			<div class="grid__row grid__row--margin">
-				<div class="grid__col grid__col--13 grid__col--margin">
+				<div class="grid__col grid__col--margin">
 							<label class="form__label">COUNTRY</label>
-							<select class="custom-select" name="country">
+							<select class="custom-select" id="country-select" name="country">
 								<option value="United States">United States</option>
 								<option value="United Kingdom">United Kingdom</option>
 								<option value="Afghanistan">Afghanistan</option>
@@ -737,31 +736,27 @@
 								<option value="Zimbabwe">Zimbabwe</li>
 							</select>
 				</div>
-				<div class="grid__col grid__col--13 grid__col--margin">
+				<div class="grid__col grid__col--margin">
 							<label class="form__label">CITY</label>
-							<select class="custom-select" name="city">
+							<select class="custom-select" id="city-select" name="city">
 								<option value="Los Angeles">Los Angeles</option>
 								<option value="Washington">Washington</option>
 								<option value="New York">New York</option>
 								<option value="Chicago">Chicago</option>
 							</select>
 				</div>
-				<div class="grid__col grid__col--13 grid__col--margin">
-							<label class="form__label">ZIP</label>
-							<input name="phone" id="phone" class="form__input required" type="text" />
-				</div>
-			</div>
-			<div class="grid__row grid__row--margin">
+				
+			<div class="grid__col grid__col--margin">
 				<div class="grid__col grid__col--margin">
-					<label class="form__label">ADRESS *</label>
-					<input name="adress" id="adress" class="form__input required" type="text" />
+					<label class="form__label">ADDRESS *</label>
+					<input name="adress" id="address" class="form__input required" type="text" />
 				</div>
 			</div>
-			<div class="grid__row grid__row--margin">
+			<!-- <div class="grid__row grid__row--margin">
 				<div class="grid__col grid__col--margin">
 					<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD PATIENT" />	
 				</div>
-			</div>
+			</div> -->
 			</form>
 
 		</div> <!-- End of Grid -->
@@ -792,11 +787,17 @@
 							</select>
 				</div>
 				<div class="grid__col grid__col--37 grid__col--margin">
-							<label class="form__label">PERIOD</label>
-							<input type="text" name="dates" class="form__input" value="" />
+					<label class="form__label">PERIOD</label>
+					<input type="text" name="dates" class="form__input" value="" />
 				</div>
+				
 			</div>
+			
 			<div class="grid__row grid__row--margin">
+				<div class="grid__col grid__col--13 grid__col--margin">
+					<label class="form__label">Blood type</label>
+					<input name="blood-type" id="blood-type" class="form__input required" type="text" />
+				</div>
 				<div class="grid__col grid__col--37 grid__col--margin">
 							<label class="form__label">FAMILY HISTORY</label>
 							<select class="custom-select" name="kdiseases2">
@@ -833,7 +834,7 @@
 			</div>
 			<div class="grid__row grid__row--margin">
 				<div class="grid__col grid__col--margin">
-					<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="SAVE" />					
+					<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD PATIENT" />					
 				</div>
 			</div>
 		</div> <!-- End of Grid -->
@@ -1119,7 +1120,7 @@
 					</div>
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--margin">
-							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD APPOINTMENT" />	
+							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit-appointment" value="ADD APPOINTMENT" />	
 						</div>
 					</div>
 				</div> <!-- End of Grid -->
@@ -1198,8 +1199,8 @@
 							</select>
 						</div>
 						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">DATE OR BIRTH</label>
-									<input type="text" name="birthday" class="form__input" value="02/03/1983" />
+									<label class="form__label">DATE OF BIRTH</label>
+									<input type="text" name="birthday" class="form__input" value="" />
 						</div>
 						<div class="grid__col grid__col--13 grid__col--margin">
 									<label class="form__label">PHONE</label>
@@ -1418,7 +1419,8 @@
 		</div>
 
 		</div>
- </div> 
+ </div>
+ 
  <script src="js/jquery-3.3.1.min.js"></script>
  <script src="js/Chart.min.js"></script>
  <script src="js/chartjs-plugin-style.min.js"></script>
@@ -1432,7 +1434,55 @@
  <script src="js/daterangepicker.min.js"></script>
  <script src="js/ion.rangeSlider.min.js"></script>
  <script src="js/jquery.dashboard-custom.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script>
+	const firstName = document.querySelector('#fname');
+	const lastName = document.querySelector('#lname');
+	const language = document.querySelector('#language-select');
+	const email = document.querySelector('#email');
+	const address = document.querySelector('#address');
+	const city = document.querySelector('#city-select');
+	const country = document.querySelector('#country-select');
+	const gender = document.querySelector('#gender');
+	const phone = document.querySelector('#phone');
+	const bloodType = document.querySelector('#blood-type');
+	const notes = document.querySelector("#notes");
+	const submitAppointment = document.querySelector('#submit-appointment');
+
+	submitAppointment.addEventListener('click', addPatient);
+	
+	const addPatient = () =>{
+		const data = { 
+			"name": firstName.value + lastName.value,
+			"email": email.value,
+			"homeAddress": address.value + city.value + country.value,
+			"gender": gender.value,
+			"language": language.value,
+			"phone_no": phone.value,
+			"blood_type":bloodType.value,
+			"notes": notes.value
+		};
+
+		axios.post('https://guarded-headland-99483.herokuapp.com/add/Patient', data, {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(res=>console.log(res))
+		.catch(err=>console.log(err))
+		
+	};
+
+	document.addEventListener('DOMContentLoaded', ()=>{
+		axios.get('https://guarded-headland-99483.herokuapp.com/patients')
+		.then(res=>{
+			console.log(res.data);
+			console.log('hi');
+		})
+		.catch(err=>console.log(err));
+	})
+
+</script> 
 </body>
 
-<!-- Mirrored from smarttemplates.net/medikit/dashboard__patients-add.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
 </html>

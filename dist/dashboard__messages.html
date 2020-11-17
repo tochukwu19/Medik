@@ -3,8 +3,8 @@
 
 <!-- Mirrored from smarttemplates.net/medikit/dashboard__patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<meta http-equiv="Content-Type" content="text/html, charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="author" content="SmartTemplates" />
 <meta name="description" content="medikit admin dashboard" />
 <meta name="keywords" content="medical dashboard, HTML UI KIT, medikit" />
@@ -46,7 +46,7 @@
 						</ul>
 					</li>		
 					<li class="inbox"><a href="dashboard__messages.html"><b>Drugs</b></a></li>
-					<li class="settings"><a href="#"><b>Settings</b></a></li>
+					<li class="logout"><a href="#"><b>Logout</b></a></li>
 				</ul>
 			</nav>
 	
@@ -118,7 +118,6 @@
 			<nav class="content-header__menu">       
 				<ul>
 					<li class="user selected"><a href="dashboard__patients-add.html">Add new patient</a></li>
-					<li class="prescription modal-toggle" data-openpopup="prescription"><a href="#">Write a prescription</a></li>
 					<li class="reports modal-toggle" data-openpopup="reports"><a href="#">Add a Drug</a></li>
 				</ul>
 			</nav>
@@ -127,36 +126,12 @@
 		<div class="content-subheader">
 		
 			<div class="content-subheader__titles">
-					<h2 class="content-subheader__title">Drygs</h2>
+					<h2 class="content-subheader__title">Drugs</h2>
 					<nav class="content-subheader__breadcrumb-menu">			
 							<ul>
 								<li><a href="dashboard.html">Dashboard</a></li>
 							</ul>
 					</nav>
-			</div>
-			
-			
-			<div class="content-subheader__options">
-			
-					<div class="content-subheader__search">
-						<form>
-							<input type="text" class="subheader-search__input" id="" name="" value="" placeholder="Search drugs" />
-							<input type="submit" class="subheader-search__submit" value="Search" />
-						</form>
-					</div>
-					
-					<div class="content-subheader__dropdown">
-						<span class="content-subheader__more show-more show-more--select show-more--select-gray has-dropdown" data-dropdown="moreoptions">Filter Options</span>
-						<nav class="dropdown-menu dropdown-menu--content dropdown-menu--subheader" id="moreoptions"> 			
-							<ul>
-								<li><a href="#">By Date</a></li>
-								<li><a href="#">By Name</a></li>
-								<li><a href="#">By Date of birth</a></li>
-								<li><a href="#">+ Add filter</a></li>
-							</ul>
-						</nav>
-					</div>
-			
 			</div>
 			
 		</div>
@@ -166,207 +141,19 @@
 		<div class="grid grid--margin">
 			
 			<div class="grid__row">
-				<div class="grid__col grid__col--padding bg-white">
-					<div class="table table--patients">
-						<div class="table__header">
-							<div class="table__row">
-								<div class="table__cell"></div>
-								<div class="table__cell">NAME OF DRUG</div>
-								<div class="table__cell"></div>
-								<div class="table__cell">EXPIRY DATE</div>
-								<div class="table__cell">DESCRIPTION</div>
-								
-								<div class="table__cell"></div>
-								<div class="table__cell"></div>
-							</div>
-						</div>
-						<div class="table__body">
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Ibuprofen</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/2024</div>
-								<div class="table__cell">Major Pain Relief</div>
-								<div class="table__cell"></div>
-								<div class="table__cell"></div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd1"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd1"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Acetaminophen
-								</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/2024</div>
-								<div class="table__cell">Major Pain Relief</div>
-								<div class="table__cell"></div>
-								<div class="table__cell"></div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd2"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd2"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Amoxicillin
-								</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/2024</div>
-								<div class="table__cell">Major Pain Relief</div>
-								<div class="table__cell"></div>
-								<div class="table__cell"></div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd3"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd3"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Cymbalta</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/2024</div>
-								<div class="table__cell">Major Pain Relief</div>
-								<div class="table__cell"></div>
-								<div class="table__cell"></div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd4"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd4"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Dupixent</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/2024</div>
-								<div class="table__cell">Major Pain Relief</div>
-								<div class="table__cell"></div>
-								<div class="table__cell"></div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd5"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd5"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Farxiga</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/2024</div>
-								<div class="table__cell">Major Pain Relief</div>
-								<div class="table__cell"></div>
-								<div class="table__cell"></div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd6"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd6"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Benzonatate</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/2024</div>
-								<div class="table__cell">Major Pain Relief</div>
-								<div class="table__cell"></div>
-								<div class="table__cell"></div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd5"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd5"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-03.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">citalopram</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/femsale.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/2024</div>
-								<div class="table__cell">Major Pain Relief</div>
-								<div class="table__cell"></div>
-								<div class="table__cell"></div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Available</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd6"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd6"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-
-
-						</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<td>NAME OF DRUG</td>
+							<td>EXPIRY DATE</td>
+							<td>DESCRIPTION</td>
+						</tr>
+					</thead>
+					<tbody class="table__body">
+					
+					</tbody>
+				</table>
 						
-					</div>
-					<!-- TABLE end -->
-				</div>
-
-			</div>
-			
-			<div class="grid__row">
-				<div class="grid__col grid__col--padding bg-white">
-					<ul class="pagination">
-						 <li><a href="#" class="pagination__current">1</a></li>
-						 <li><a href="#">2</a></li>
-						 <li><a href="#">3</a></li>
-						 <li><a href="#">4</a></li>
-						 <li><a href="#">5</a></li>
-						 <li><a href="#">NEXT</a></li>
-					</ul>
-				</div>
 			</div>
 
 		</div> <!-- End of Grid -->
@@ -376,447 +163,6 @@
 	</div>
 	
 </div> <!-- Wrap end -->
-
-<div class="section section-panel" id="panel">
-	<div class="panel-resize"></div>
-	<div class="section-panel__content scrollbar-macosx">
-		
-
-		<div class="grid">
-			
-		        <div class="grid__row">	
-				<div class="grid__col grid__col--padding">
-					<div class="grid__row">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Settings Panel</h3>
-						</div>		
-					</div>
-					<div class="grid__row align-c">
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<label class="form__label pb0">ENABLED OPTION</label>
-						</div>
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<div class="form__switcher">
-								<label class="switch">
-								<input class="switch__input" type="checkbox" data-role="none" checked />
-								<span class="switch__label" data-on="On" data-off="Off"></span> <span class="switch__handle"></span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="grid__row align-c">
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<label class="form__label pb0">DISABLED OPTION</label>
-						</div>
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<div class="form__switcher">
-								<label class="switch">
-								<input class="switch__input" type="checkbox" data-role="none"/>
-								<span class="switch__label" data-on="On" data-off="Off"></span> <span class="switch__handle"></span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="grid__row align-c">
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<label class="form__label pb0">ENABLED OPTION</label>
-						</div>
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<div class="form__switcher">
-								<label class="switch">
-								<input class="switch__input" type="checkbox" data-role="none" checked />
-								<span class="switch__label" data-on="On" data-off="Off"></span> <span class="switch__handle"></span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="grid__row align-c">
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<label class="form__label pb0">DISABLED OPTION</label>
-						</div>
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<div class="form__switcher">
-								<label class="switch">
-								<input class="switch__input" type="checkbox" data-role="none"/>
-								<span class="switch__label" data-on="On" data-off="Off"></span> <span class="switch__handle"></span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="grid__row">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Custom radios</h3>
-						</div>		
-					</div>
-					<div class="grid__row">
-						<div class="grid__col grid__col--margin">
-							<label class="form__label">CUSTOM RADIO SETTINGS</label>
-							<div class="form__radio">
-								<input type="radio" name="cr" id="cr1" value="1" checked /><label for="cr1">Radio option</label>
-							</div>
-							<div class="form__radio">
-								<input type="radio" name="cr" id="cr2" value="2" /><label for="cr2">Radio option</label>
-							</div>
-							<div class="form__radio">
-								<input type="radio" name="cr" id="cr3" value="3" /><label for="cr3">Radio option</label>
-							</div>
-						</div>
-					</div>
-					<div class="grid__row">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Custom checkboxes</h3>
-						</div>		
-					</div>
-					<div class="grid__row">
-						<div class="grid__col grid__col--margin">
-							<label class="form__label">CUSTOM CHECKBOX SETTINGS</label>
-							<div class="form__checkbox">
-								<input type="checkbox" name="cc1" id="cc1" value="1" checked /><label for="cc1">Checkbox option</label>
-							</div>
-							<div class="form__checkbox">
-								<input type="checkbox" name="cc2" id="cc2" value="2" /><label for="cc2">Checkbox option</label>
-							</div>
-							<div class="form__checkbox">
-								<input type="checkbox" name="cc3" id="cc3" value="3" /><label for="cc3">Checkbox option</label>
-							</div>
-						</div>
-					</div>
-					
-
-					<div class="grid__row">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Custom Slider</h3>
-						</div>		
-					</div>
-					<div class="grid__row">
-						<div class="grid__col grid__col--margin">
-							<label class="form__label">CUSTOM SINGLE SLIDER</label>
-								<input type="text" class="js-slider" name="my_range" value="" />
-						</div>
-					</div>
-					<div class="grid__row">
-						<div class="grid__col grid__col--margin mb0">
-							<label class="form__label">CUSTOM RANGE SLIDER</label>
-								<input type="text" class="js-range-slider" name="my_range" value="" />
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div> <!-- End of Grid -->	
-	</div>
-</div>  <!-- End of right panel -->
-
-  <!-- Modal - Appointment --> 
-<div class="modal modal--appointment">
-		
-		<div class="modal__overlay modal__overlay--toggle"></div>
-		<div class="modal__wrapper modal-transition">
-		  
-		<div class="modal__body">
-			<div class="modal__header">
-				<h2 class="modal__header-title">Make an appointment</h2>
-				<div class="modal__close modal__overlay--toggle"><span></span></div>
-			</div>
-			<div class="modal__content">					
-		
-				<div class="grid">
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Patient Information</h3>
-						</div>		
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--13 grid__col--margin">
-							<label class="form__label">PATIENT NAME</label>
-							<select class="custom-select" name="appname">
-								<option value="Patient Name">Emma Williams</option>
-								<option value="Patient Name">Olivia Johnson</option>
-								<option value="Patient Name">Ava Jones</option>
-								<option value="Patient Name">Isabella Brown</option>
-								<option value="Patient Name">Sophia Davis</option>
-								<option value="Patient Name">Mia Latin</option>
-								<option value="Patient Name">Amelia Miller</option>
-								<option value="Patient Name">Charlotte Wilson</option>
-								<option value="Patient Name">Abigail Moore</option>
-								<option value="Patient Name">Emily Anderson</option>
-								<option value="Patient Name">Harper Thomas</option>
-								<option value="Patient Name">Evelyn Jackson</option>
-								<option value="Patient Name">Madison Taylor</option>
-								<option value="Patient Name">Victoria White</option>
-								<option value="Patient Name">Sofia Harris</option>
-								<option value="Patient Name">Scarlett Martin</option>
-								<option value="Patient Name">Aria Thompson</option>
-								<option value="Patient Name">Elizabeth Robinson</option>
-								<option value="Patient Name">Camila Lewis</option>
-								<option value="Patient Name">Layla Garcia</option>
-								<option value="Patient Name">Ella Walker</option>
-								<option value="Patient Name">Chloe Clark</option>
-								<option value="Patient Name">Zoey Rodriguez</option>
-								<option value="Patient Name">Penelope Martinez</option>
-								<option value="Patient Name">Matthew Jones</option>
-								<option value="Patient Name">Benjamin Brown</option>
-								<option value="Patient Name">Alexander Davies</option>
-								<option value="Patient Name">William Evans</option>
-								<option value="Patient Name">Daniel Smith</option>
-								<option value="Patient Name">Jayden Taylor</option>
-								<option value="Patient Name">Oliver Thomas</option>
-								<option value="Patient Name">Carter Roberts</option>
-								<option value="Patient Name">Sebastian Walker</option>
-								<option value="Patient Name">Joseph Johnson</option>
-								<option value="Patient Name">David Thompson</option>
-								<option value="Patient Name">Gabriel Wood</option>
-								<option value="Patient Name">Julian Robinson</option>
-								<option value="Patient Name">Jackson Wright</option>
-								<option value="Patient Name">Anthony King</option>
-								<option value="Patient Name">Dylan Cooper</option>
-							</select>
-						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">DATE OR BIRTH</label>
-									<input type="text" name="birthday" class="form__input" value="02/03/1983" />
-						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">PHONE</label>
-									<input type="text" name="appphone" class="form__input" value="" />
-						</div>
-					</div>
-					<div class="grid__row  grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Appointment Information</h3>
-						</div>		
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<label class="form__label">LOCATION</label>
-							<select class="custom-select" name="applocation">
-								<option value="Los Angeles">H Clinic, Houston Street</option>
-								<option value="Washington">Hostpital Washington</option>
-								<option value="New York">Clinic 54 New York</option>
-								<option value="Chicago">43V Room Chicago</option>
-							</select>
-						</div>
-						<div class="grid__col grid__col--12 grid__col--margin">
-									<label class="form__label">DATE &amp; TIME</label>
-									<input type="text" name="timepicker" class="form__input" value="" />
-						</div>
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Examination Information</h3>
-						</div>		
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--13 grid__col--margin">
-							<label class="form__label">EXAMINATION TYPE</label>
-							<select class="custom-select" name="apptype">
-								<option value="Examination">Abdominal radiology</option>
-								<option value="Examination">Breast imaging</option>
-								<option value="Examination">Cardiothoracic radiology</option>
-								<option value="Examination">Cardiovascular radiology</option>
-								<option value="Examination">Chest radiology</option>
-								<option value="Examination">Emergency radiology</option>
-								<option value="Examination">Endovascular surgical neuroradiology</option>
-								<option value="Examination">Gastrointestinal radiology</option>
-								<option value="Examination">Genitourinary radiology</option>
-								<option value="Examination">Head and neck radiology</option>
-								<option value="Examination">Interventional radiology</option>
-								<option value="Examination">Musculoskeletal radiology</option>
-								<option value="Examination">Neuroradiology</option>
-								<option value="Examination">Nuclear radiology</option>
-								<option value="Examination">Pediatric radiology</option>
-								<option value="Examination">Radiation oncology</option>
-								<option value="Examination">Vascular and interventional radiology</option>
-							</select>
-						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">DOCTOR</label>
-									<select class="custom-select" name="apptype">
-										<option value="Patient Name">Dr. Alexander Davies</option>
-										<option value="Patient Name">Dr. William Evans</option>
-										<option value="Patient Name">Dr. Daniel Smith</option>
-										<option value="Patient Name">Dr. Jayden Taylor</option>
-										<option value="Patient Name">Dr. Oliver Thomas</option>
-										<option value="Patient Name">Dr. Carter Roberts</option>
-										<option value="Patient Name">Dr. Sebastian Walker</option>
-										<option value="Patient Name">Dr. Joseph Johnson</option>
-										<option value="Patient Name">Dr. David Thompson</option>
-										<option value="Patient Name">Dr. Gabriel Wood</option>
-										<option value="Patient Name">Dr. Julian Robinson</option>
-									</select>
-						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">NOTES</label>
-									<input name="notes" id="notes" class="form__input" type="text" />
-						</div>
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD APPOINTMENT" />	
-						</div>
-					</div>
-				</div> <!-- End of Grid -->
-
-			</div> 
-
-			
-		</div>
-
-		</div>
- </div> 
- 
-  <!-- Modal - prescription --> 
-<div class="modal modal--prescription">
-		
-		<div class="modal__overlay modal__overlay--toggle"></div>
-		<div class="modal__wrapper modal-transition">
-		  
-		<div class="modal__body">
-			<div class="modal__header">
-				<h2 class="modal__header-title">Make a prescription</h2>
-				<div class="modal__close modal__overlay--toggle"><span></span></div>
-			</div>
-			<div class="modal__content">					
-		
-				<div class="grid">
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Patient Information</h3>
-						</div>		
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--13 grid__col--margin">
-							<label class="form__label">PATIENT NAME</label>
-							<select class="custom-select" name="appname">
-								<option value="Patient Name">Emma Williams</option>
-								<option value="Patient Name">Olivia Johnson</option>
-								<option value="Patient Name">Ava Jones</option>
-								<option value="Patient Name">Isabella Brown</option>
-								<option value="Patient Name">Sophia Davis</option>
-								<option value="Patient Name">Mia Latin</option>
-								<option value="Patient Name">Amelia Miller</option>
-								<option value="Patient Name">Charlotte Wilson</option>
-								<option value="Patient Name">Abigail Moore</option>
-								<option value="Patient Name">Emily Anderson</option>
-								<option value="Patient Name">Harper Thomas</option>
-								<option value="Patient Name">Evelyn Jackson</option>
-								<option value="Patient Name">Madison Taylor</option>
-								<option value="Patient Name">Victoria White</option>
-								<option value="Patient Name">Sofia Harris</option>
-								<option value="Patient Name">Scarlett Martin</option>
-								<option value="Patient Name">Aria Thompson</option>
-								<option value="Patient Name">Elizabeth Robinson</option>
-								<option value="Patient Name">Camila Lewis</option>
-								<option value="Patient Name">Layla Garcia</option>
-								<option value="Patient Name">Ella Walker</option>
-								<option value="Patient Name">Chloe Clark</option>
-								<option value="Patient Name">Zoey Rodriguez</option>
-								<option value="Patient Name">Penelope Martinez</option>
-								<option value="Patient Name">Matthew Jones</option>
-								<option value="Patient Name">Benjamin Brown</option>
-								<option value="Patient Name">Alexander Davies</option>
-								<option value="Patient Name">William Evans</option>
-								<option value="Patient Name">Daniel Smith</option>
-								<option value="Patient Name">Jayden Taylor</option>
-								<option value="Patient Name">Oliver Thomas</option>
-								<option value="Patient Name">Carter Roberts</option>
-								<option value="Patient Name">Sebastian Walker</option>
-								<option value="Patient Name">Joseph Johnson</option>
-								<option value="Patient Name">David Thompson</option>
-								<option value="Patient Name">Gabriel Wood</option>
-								<option value="Patient Name">Julian Robinson</option>
-								<option value="Patient Name">Jackson Wright</option>
-								<option value="Patient Name">Anthony King</option>
-								<option value="Patient Name">Dylan Cooper</option>
-							</select>
-						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">DATE OR BIRTH</label>
-									<input type="text" name="birthday" class="form__input" value="02/03/1983" />
-						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">PHONE</label>
-									<input type="text" name="appphone" class="form__input" value="" />
-						</div>
-					</div>
-					<div class="grid__row  grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Prescription Information</h3>
-						</div>		
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--12 grid__col--margin">
-							<label class="form__label">MEDICATION</label>
-							<select class="custom-select" name="applocation">
-									<option value="Acetaminophen">Acetaminophen</option>
-									<option value="Adderall">Adderall</option>
-									<option value="Alprazolam">Alprazolam</option>
-									<option value="Amitriptyline">Amitriptyline</option>
-									<option value="Amlodipine">Amlodipine</option>
-									<option value="Amoxicillin">Amoxicillin</option>
-									<option value="Ativan">Ativan</option>
-									<option value="Atorvastatin">Atorvastatin</option>
-									<option value="Azithromycin">Azithromycin</option>
-									<option value="Ciprofloxacin">Ciprofloxacin</option>
-									<option value="Citalopram">Citalopram</option>
-									<option value="Clindamycin">Clindamycin</option>
-									<option value="Clonazepam">Clonazepam</option>
-									<option value="Codeine">Codeine</option>
-									<option value="Cyclobenzaprine">Cyclobenzaprine</option>
-									<option value="Cymbalta">Cymbalta</option>
-									<option value="Doxycycline">Doxycycline</option>
-									<option value="Gabapentin">Gabapentin</option>
-									<option value="Hydrochlorothiazide">Hydrochlorothiazide</option>
-									<option value="Ibuprofen">Ibuprofen</option>
-							</select>
-						</div>
-						<div class="grid__col grid__col--12 grid__col--margin">
-									<label class="form__label">PERIOD FOR MEDICATION</label>
-									<input type="text" name="dates" class="form__input" value="" />
-						</div>
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<h3 class="grid__col-title">Doctor Information</h3>
-						</div>		
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">DOCTOR</label>
-									<select class="custom-select" name="apptype">
-										<option value="Patient Name">Dr. Alexander Davies</option>
-										<option value="Patient Name">Dr. William Evans</option>
-										<option value="Patient Name">Dr. Daniel Smith</option>
-										<option value="Patient Name">Dr. Jayden Taylor</option>
-										<option value="Patient Name">Dr. Oliver Thomas</option>
-										<option value="Patient Name">Dr. Carter Roberts</option>
-										<option value="Patient Name">Dr. Sebastian Walker</option>
-										<option value="Patient Name">Dr. Joseph Johnson</option>
-										<option value="Patient Name">Dr. David Thompson</option>
-										<option value="Patient Name">Dr. Gabriel Wood</option>
-										<option value="Patient Name">Dr. Julian Robinson</option>
-									</select>
-						</div>
-						<div class="grid__col grid__col--23 grid__col--margin">
-									<label class="form__label">NOTES</label>
-									<input name="notes" id="notes" class="form__input" type="text" />
-						</div>
-					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<input type="submit" name="submit" class="button button--submit button--inline button--blue-bg" id="submit" value="SAVE PRESCRIPTION" />
-							<input type="submit" name="submit" class="button button--submit button--inline button--blue-bg" id="submit" value="SAVE &amp; PRINT" />								
-						</div>
-					</div>
-				</div> <!-- End of Grid -->
-
-			</div> 
-
-			
-		</div>
-
-		</div>
- </div> 
  
  
    <!-- Modal - reports --> 
@@ -838,42 +184,30 @@
 							<h3 class="grid__col-title">Patient Information</h3>
 						</div>		
 					</div>
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--13 grid__col--margin">
-							<label class="form__label">DRUG NAME</label>
-							<select class="custom-select" name="appname">
-								<option value="Patient Name">Ibuprofen
-								</option>
-								<option value="Patient Name">Acetaminophen</option>
-								<option value="Patient Name">Amoxicillin</option>
-								<option value="Patient Name">Cymbalta</option>
-								<option value="Patient Name">Dupixent</option>
-								<option value="Patient Name">Farxiga</option>
-								<option value="Patient Name">Benzonatate</option>
-								<option value="Patient Name">Citalopram</option>
-							
-							</select>
+					<form class="docForm">
+						<div class="grid__row grid__row--margin" style="width: 90%;">
+							<div class="grid__col grid__col--13 grid__col--margin">
+								<label class="form__label">DRUG NAME</label>
+								<input type="text" name="drugName" class="form__input drugName" required/>
+							</div>
+							<div class="grid__col grid__col--13 grid__col--margin">
+								<label class="form__label">EXPIRY DATE</label>
+								<input type="text" name="expDate" class="form__input exp" required/>
+							</div>
+							<div class="grid__col grid__col--13 grid__col--margin">
+								<label class="form__label">DESCRIPTION</label>
+								<input type="text" name="description" class="form__input desc" required/>
+							</div>
 						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">EXPIRY DATE</label>
-									<input type="text" name="birthday" class="form__input" value="02/03/1983" />
+						<div class="grid__row grid__row--margin">
+							<div class="grid__col grid__col--margin">
+								<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD A DRUG" />	
+							</div>
 						</div>
-						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">DESCRIPTION</label>
-									<input type="text" name="appphone" class="form__input" value="" />
-						</div>
-					
-					<div class="grid__row grid__row--margin">
-						<div class="grid__col grid__col--margin">
-							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD A DRUG" />							
-						</div>
-					</div>
-				</div> <!-- End of Grid -->
+					</form>	
+				 <!-- End of Grid -->
 
 			</div> 
-
-			
-		</div>
 
 		</div>
  </div> 
@@ -881,9 +215,75 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/moment.min.js"></script>
 <script src="js/select2.min.js"></script>
-<script src="js/daterangepicker.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/jquery.dashboard-custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', event => {
+
+		axios.get('https://guarded-headland-99483.herokuapp.com/drugs', {
+			headers: {}
+		})
+		.then((response) => {
+			var drugs = response.data.data
+			console.log(drugs);
+
+			for(let i=0; i<drugs.length; i++){
+				let row = document.createElement('tr');
+
+				let body = document.querySelector('tbody')
+
+				let cell = document.createElement('td');
+				let textNode = document.createTextNode(drugs[i].name);
+				let cell2 = document.createElement('td');
+				let textNode2 = document.createTextNode(drugs[i].expiryDate);
+				let cell3 = document.createElement('td');
+				let textNode3 = document.createTextNode(drugs[i].description);
+
+				cell.appendChild(textNode);
+				cell2.appendChild(textNode2);
+				cell3.appendChild(textNode3);
+
+				row.appendChild(cell); 
+				row.appendChild(cell2); 
+				row.appendChild(cell3);
+
+				body.append(row) 
+			}
+		})
+		.catch((error)=> {
+			console.log(error)
+		})
+
+	});
+
+	// Posting data
+	const form = document.querySelector('.docForm');
+
+	form.addEventListener('submit', function(e){
+		console.log(e)
+		e.preventDefault();
+
+		const data = {
+			'name': document.querySelector(".drugName").value,
+			'expiryDate': document.querySelector(".exp").value,
+			'description': document.querySelector(".desc").value
+		}
+
+		console.log(data)
+
+		axios.post('https://guarded-headland-99483.herokuapp.com/add/drug', data, {
+				headers: { 
+					'Content-Type': 'application/json'
+				}
+			})
+			.then((response) => {
+			})
+			.then(()=> {
+				form.reset()
+			})
+	})
+</script>
 </body>
 
 <!-- Mirrored from smarttemplates.net/medikit/dashboard__patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->

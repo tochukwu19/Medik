@@ -1120,7 +1120,7 @@
 					</div>
 					<div class="grid__row grid__row--margin">
 						<div class="grid__col grid__col--margin">
-							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="ADD APPOINTMENT" />	
+							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit-appointment" value="ADD APPOINTMENT" />	
 						</div>
 					</div>
 				</div> <!-- End of Grid -->
@@ -1199,8 +1199,8 @@
 							</select>
 						</div>
 						<div class="grid__col grid__col--13 grid__col--margin">
-									<label class="form__label">DATE OR BIRTH</label>
-									<input type="text" name="birthday" class="form__input" value="02/03/1983" />
+									<label class="form__label">DATE OF BIRTH</label>
+									<input type="text" name="birthday" class="form__input" value="" />
 						</div>
 						<div class="grid__col grid__col--13 grid__col--margin">
 									<label class="form__label">PHONE</label>
@@ -1420,46 +1420,7 @@
 
 		</div>
  </div>
- <script>
-		const firstName = document.querySelector('#fname');
-		const lastName = document.querySelector('#lname');
-		const language = document.querySelector('#language-select');
-		const email = document.querySelector('#email');
-		const address = document.querySelector('#address');
-		const city = document.querySelector('#city-select');
-		const country = document.querySelector('#country-select');
-		const gender = document.querySelector('#gender');
-		const phone = document.querySelector('#phone');
-		const bloodType = document.querySelector('#blood-type');
-		
-	const addPatient = () =>{
-		const data = { 
-			name: firstName.value + lastName.value,
-			email: email.value,
-			homeAddress: address.value + city.value + country.value,
-			gender: gender.value,
-			language: language.value,
-			phone_no: phone.value,
-			blood_type:bloodType.value
-		}
-
-		fetch('https://guarded-headland-99483.herokuapp.com/add/Patient', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(data),
-			})
-			.then(response => response.json())
-			.then(data => {
-			console.log('Success:', data);
-			})
-			.catch((error) => {
-			console.error('Error:', error);
-			});
-	}
-
- </script> 
+ 
  <script src="js/jquery-3.3.1.min.js"></script>
  <script src="js/Chart.min.js"></script>
  <script src="js/chartjs-plugin-style.min.js"></script>
@@ -1473,7 +1434,55 @@
  <script src="js/daterangepicker.min.js"></script>
  <script src="js/ion.rangeSlider.min.js"></script>
  <script src="js/jquery.dashboard-custom.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script>
+	const firstName = document.querySelector('#fname');
+	const lastName = document.querySelector('#lname');
+	const language = document.querySelector('#language-select');
+	const email = document.querySelector('#email');
+	const address = document.querySelector('#address');
+	const city = document.querySelector('#city-select');
+	const country = document.querySelector('#country-select');
+	const gender = document.querySelector('#gender');
+	const phone = document.querySelector('#phone');
+	const bloodType = document.querySelector('#blood-type');
+	const notes = document.querySelector("#notes");
+	const submitAppointment = document.querySelector('#submit-appointment');
+
+	submitAppointment.addEventListener('click', addPatient);
+	
+	const addPatient = () =>{
+		const data = { 
+			"name": firstName.value + lastName.value,
+			"email": email.value,
+			"homeAddress": address.value + city.value + country.value,
+			"gender": gender.value,
+			"language": language.value,
+			"phone_no": phone.value,
+			"blood_type":bloodType.value,
+			"notes": notes.value
+		};
+
+		axios.post('https://guarded-headland-99483.herokuapp.com/add/Patient', data, {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+		.then(res=>console.log(res))
+		.catch(err=>console.log(err))
+		
+	};
+
+	document.addEventListener('DOMContentLoaded', ()=>{
+		axios.get('https://guarded-headland-99483.herokuapp.com/patients')
+		.then(res=>{
+			console.log(res.data);
+			console.log('hi');
+		})
+		.catch(err=>console.log(err));
+	})
+
+</script> 
 </body>
 
-<!-- Mirrored from smarttemplates.net/medikit/dashboard__patients-add.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
 </html>

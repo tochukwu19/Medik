@@ -31,17 +31,6 @@
 			<nav class="sidebar-menu"> 
 				<ul>
 					<li class="dashboard"><a href="dashboard.html"><b>Dashboard</b></a></li>
-					<li class="components has-submenu"><a href="#"><b>Components<span class="submenu-arrow"></span></b></a>
-						<ul class="sidebar-menu__submenu">
-							<li><a href="dashboard__grid.html">Grid</a></li>
-							<li><a href="dashboard__charts.html">Charts</a></li>
-							<li><a href="dashboard__forms.html">Forms</a></li>
-							<li><a href="dashboard__tabs.html">Tabs</a></li>
-							<li><a href="dashboard__toggles.html">Toggles</a></li>
-							<li><a href="dashboard__tables.html">Tables</a></li>
-							<li><a href="dashboard__typography.html">Typography</a></li>
-						</ul>
-					</li>
 					<li class="appointment"><a href="dashboard__appointments.html"><b>Appointments</b></a></li>
 					<li class="doctors has-submenu"><a href="#"><b>Doctors<span class="submenu-arrow"></span></b></a>
 						<ul class="sidebar-menu__submenu">
@@ -56,8 +45,8 @@
 							<li><a href="dashboard__patient.html">Patient profile</a></li>
 						</ul>
 					</li>		
-					<li class="inbox"><a href="dashboard__messages.html"><b>Messages<span class="submenu-bubble">3</span></b></a></li>
-					<li class="settings"><a href="#"><b>Settings</b></a></li>
+					<li class="inbox"><a href="dashboard__messages.html"><b>Drugs</b></a></li>
+					<li class="logout"><a href="#"><b>Logout</b></a></li>
 				</ul>
 			</nav>
 	
@@ -265,36 +254,6 @@
 				</div>
 			</div>
 			<div class="grid__row">
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding gradient-blue widget-icon selected">
-						<span class="widget-icon__badge">3 NEW</span>
-						<img src="images/icons/icons-64-white/chat.png" alt="" title=""/>
-						<h5>Active Conversations</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding gradient-lightblue widget-icon selected">
-						<span class="widget-icon__badge">14 NEW</span>
-						<img src="images/icons/icons-64-white/laboratory.png" alt="" title=""/>
-						<h5>Laboratory Results</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding gradient-pink widget-icon selected">
-						<span class="widget-icon__badge">2 NEW</span>
-						<img src="images/icons/icons-64-white/calendar.png" alt="" title=""/>
-						<h5>New Events</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding bg-white widget-icon">
-						<img src="images/icons/icons-64-blue/users.png" alt="" title=""/>
-						<h5>Important Patients</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding bg-white widget-icon">
-						<img src="images/icons/icons-64-blue/reports.png" alt="" title=""/>
-						<h5>Reports Archive</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding bg-white widget-icon">
-						<img src="images/icons/icons-64-blue/payments.png" alt="" title=""/>
-						<h5>Payments</h5>
-				</div>
-
-			</div>	
-			<div class="grid__row">
 				<div class="grid__col grid__col--23 grid__col--margin grid__col--padding bg-white">
 					<div class="grid__row justify-sb">
 						<div class="grid__col grid__col--mb-12">
@@ -412,53 +371,6 @@
 					</div>
 					<!-- TABLE end -->
 				</div>
-				<div class="grid__col grid__col--13 grid__col--margin grid__col--padding bg-white">
-					<div class="grid__row justify-sb">
-						<div class="grid__col grid__col--mb-12">
-							<h3 class="grid__col-title">Latest Reports</h3>
-							<span class="grid__col-subtitle">LAST 7 DAYS</span>
-						</div>
-						<div class="grid__col grid__col--mb-12 d-flex justify-fe">
-							<span class="show-more show-more--arrow color-gray600 has-dropdown" data-dropdown="reportsdropdown"></span>
-						</div>
-					</div>
-					<nav class="dropdown-menu dropdown-menu--content" id="reportsdropdown"> 			
-						<ul>
-							<li><a href="#">More Details</a></li>
-							<li><a href="#">View Report</a></li>
-							<li><a href="#">Edit Settings</a></li>
-							<li><a href="#">+ Add widget</a></li>
-						</ul>
-					</nav>
-					<canvas id="ReportsChart" width="100%" height="40"></canvas>
-					<div class="table table--no-header table--latest-reports">
-						<div class="table__body">
-							<div class="table__row">
-								<div class="table__cell">Infectious disease.pdf</div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
-							</div>
-							<div class="table__row">
-								<div class="table__cell">Paediatric.doc</div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
-							</div>
-							<div class="table__row">
-								<div class="table__cell">Hepatology.pdf</div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
-							</div>
-							<div class="table__row">
-								<div class="table__cell">General Surgery.doc</div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
-							</div>
-						</div>
-						
-					</div>
-					<!-- TABLE end -->
-				</div>
-
 			</div>
 			
 			

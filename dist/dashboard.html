@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from smarttemplates.net/medikit/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:51:52 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="author" content="SmartTemplates" />
+<meta name="description" content="medikit admin dashboard" />
+<meta name="keywords" content="medical dashboard, HTML UI KIT, medikit" />
+<title>Medik</title>
+<link rel="stylesheet" href="css/swiper.css">
+<link rel="stylesheet" href="css/jquery.scrollbar.css">
+<link rel="stylesheet" href="css/daterangepicker.css">
+<link rel="stylesheet" href="css/select2.css">
+<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+<link rel="stylesheet" href="css/dashboard.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">  
+</head>
+<body>
+
+<div class="dashboard-wrap">
+
+	<header class="sidebar-header">
+		<h1 class="sidebar-header__logo">m<span>edi<strong>k</strong></span></h1>
+	</header>
+	
+	<!-- Left Sidebar -->
+	<div class="section section--sidebar" id="sidebar">
+	
+			<nav class="sidebar-menu"> 
+				<ul>
+					<li class="dashboard"><a href="dashboard.html"><b>Dashboard</b></a></li>
+					</li>
+					<li class="appointment"><a href="dashboard__appointments.html"><b>Appointments</b></a></li>
+					<li class="doctors has-submenu"><a href="#"><b>Doctors<span class="submenu-arrow"></span></b></a>
+						<ul class="sidebar-menu__submenu">
+							<li><a href="dashboard__doctors-add.html">Add new doctor</a></li>
+							<li><a href="dashboard__doctors.html">View all doctors</a></li>
+						</ul>
+					</li>
+					<li class="patients has-submenu"><a href="#"><b>Patients<span class="submenu-arrow"></span></b></a>
+						<ul class="sidebar-menu__submenu">
+							<li><a href="dashboard__patients-add.html">Add new patient</a></li>
+							<li><a href="dashboard__patients.html">View all patients</a></li>
+							<li><a href="dashboard__patient.html">Patient profile</a></li>
+						</ul>
+					</li>		
+					<li class="inbox"><a href="dashboard__messages.html"><b>Drugs</b></a></li>
+					<li class="logout components"><a href="./index.html"><b>Logout</b></a></li>
+				</ul>
+			</nav>
+	
+	</div>
+	
+	<!-- Content -->
+	<div class="section section--content" id="content">
+		<header class="content-header">
+		
+			<div class="sidebar-resize"></div>
+			<div class="mobile-menu"><div class="st-burger-icon st-burger-icon--medium"><span></span></div></div>
+			
+			<div class="content-header__user content-header__dropdown">  
+			    <div class="content-header__user-avatar content-header__dropdown-activate" data-dropdown="userdropdown">
+					
+			    </div>  
+				<nav class="dropdown-menu dropdown-menu--header dropdown-menu--user-menu " id="userdropdown"> 	
+				<ul>
+				    <li class="logout"><a href="./index.html" class="button button--general button--red-border">Logout</a></li>
+				</ul>
+				</nav>
+			</div>
+			
+			<div class="mobile-submenu"></div>
+			
+		</header>
+
+		
+		<div class="grid grid--margin">
+
+			<div class="grid__row dashboard-intro">
+				<div class="grid__col grid__col--margin grid__col--padding bg-white">
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin grid__col--12">
+							<div class="dashboard-intro__title">Good morning, <span>Dr Roberts</span></div>
+							<div class="dashboard-intro__subtitle">Here are your important tasks, updates and alerts. You can set your in app preferences here.</div>
+						</div>
+					</div>
+					<div class="grid__row">
+						<div class="grid__col grid__col--13 grid__col--margin grid__col--padding bg-gray10 mb0" style="padding: 15px">
+							<div class="grid__row justify-sb">
+								<div class="grid__col grid__col--mb-12">
+									<h3 class="grid__col-title">Important Tasks</h3>
+									<span class="grid__col-subtitle">TODAY 24, JAN 2019</span>
+								</div>
+								<div class="grid__col grid__col--mb-12 d-flex justify-fe">
+									<span class="show-more show-more--plus bg-white color-gray600 has-dropdown" data-dropdown="tasksdropdown">+</span>
+								</div>
+							</div>
+							
+							<nav class="dropdown-menu dropdown-menu--content" id="tasksdropdown"> 			
+								<ul>
+									<li><a href="#">More Details</a></li>
+									<li><a href="#">View Activity</a></li>
+									<li><a href="#">Edit Settings</a></li>
+									<li><a href="#">+ Edit widget</a></li>
+								</ul>
+							</nav>
+							<div class="d-flex align-c">
+								<div class="info-nr info-nr--strong gradient-blue gradient-text">23</div>
+								<div class="info-details">
+								<p>3 URGENT</p>
+								<p>16 LESS URGENT</p>
+								<p>4 REQUIRED</p>
+								</div>
+							</div>
+						</div>
+						<div class="grid__col grid__col--13 grid__col--margin grid__col--padding bg-gray10 mb0" style="padding: 15px">
+							<div class="grid__row justify-sb">
+								<div class="grid__col grid__col--mb-12">
+									<h3 class="grid__col-title">New Patients</h3>
+									<span class="grid__col-subtitle">REGISTERED LATELY</span>
+								</div>
+								<div class="grid__col grid__col--mb-12 d-flex justify-fe">
+									<span class="show-more show-more--plus bg-white color-gray600 has-dropdown" data-dropdown="newpatientsdropdown">+</span>
+								</div>
+							</div>
+							<nav class="dropdown-menu dropdown-menu--content" id="newpatientsdropdown"> 			
+								<ul>
+									<li><a href="#">More Details</a></li>
+									<li><a href="#">View Patients</a></li>
+									<li><a href="#">Edit Settings</a></li>
+									<li><a href="#">+ Edit widget</a></li>
+								</ul>
+							</nav>
+							<div class="d-flex align-c" style="justify-content: center;">
+								<div class="info-nr info-nr1 info-nr--strong gradient-lightblue gradient-text"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid__row">
+				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding gradient-pink widget-icon selected" style="padding: 15px">
+						<span class="widget-icon__badge">2 NEW</span>
+						<img src="images/icons/icons-64-white/calendar.png" alt="" title=""/>
+						<h5>New Events</h5>
+				</div>
+				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding bg-white widget-icon" style="padding: 15px">
+						<img src="images/icons/icons-64-blue/users.png" alt="" title=""/>
+						<h5>Important Patients</h5>
+				</div>
+			</div>	
+			<div class="grid__row">
+				<div class="grid__col grid__col--23 grid__col--margin grid__col--padding bg-white">
+					<div class="grid__row justify-sb">
+						<div class="grid__col grid__col--mb-12">
+							<h3 class="grid__col-title">Activity</h3>
+							<span class="grid__col-subtitle">LAST YEAR</span>
+						</div>
+						<div class="grid__col grid__col--mb-12 d-flex justify-fe">
+							<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="activitydropdown"></span>
+						</div>
+					</div>
+					<nav class="dropdown-menu dropdown-menu--content" id="activitydropdown"> 			
+						<ul>
+							<li><a href="#">More Details</a></li>
+							<li><a href="#">View Activity</a></li>
+							<li><a href="#">Edit Settings</a></li>
+							<li><a href="#">+ Add widget</a></li>
+						</ul>
+					</nav>
+					<canvas id="ActivityChart" width="100%" height="40"></canvas>
+				</div>
+				<div class="grid__col grid__col--13 grid__col--margin grid__col--padding bg-white">
+					<div class="grid__row justify-sb">
+						<div class="grid__col grid__col--mb-12">
+							<h3 class="grid__col-title">Recent Patients</h3>
+							<span class="grid__col-subtitle">LAST WEEK</span>
+						</div>
+						<div class="grid__col grid__col--mb-12 d-flex justify-fe">
+							<span class="show-more show-more--plus bg-gray10 color-gray600 has-dropdown" data-dropdown="newddropdown">+</span>
+						</div>
+					</div>
+					<nav class="dropdown-menu dropdown-menu--content" id="newddropdown"> 			
+						<ul>
+							<li><a href="#">Details</a></li>
+							<li><a href="#">Share</a></li>
+							<li><a href="#">Settings</a></li>
+						</ul>
+					</nav>
+					<div class="table table--no-header table--new-doctors">
+						<div class="table__body">
+						</div>
+						
+					</div>
+					<!-- TABLE end -->
+				</div>
+
+			</div>
+			
+			
+			<div class="grid__row grid__row--d-block">
+				<div class="grid__col grid__col--margin grid__col--padding bg-white">
+					<div class="grid__row justify-sb">
+						<div class="grid__col grid__col--mb-12">
+							<h3 class="grid__col-title">Appointments</h3>
+						</div>
+					</div>
+					<div class="appointments">
+					  	<div class="appointments__button--next swiper-button-next"></div>
+						<div class="appointments__button--prev swiper-button-prev"></div>
+					  
+						<div class="appointments__content swiper-wrapper">
+							  
+
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+			
+			
+			<div class="grid__row">
+				<div class="grid__col grid__col--13 grid__col--margin grid__col--padding bg-white mb0">
+					<div class="grid__row justify-sb">
+						<div class="grid__col grid__col--mb-12">
+							<h3 class="grid__col-title">Calendar</h3>
+							<span class="grid__col-subtitle">EVENTS BY MONTH</span>
+						</div>
+						<div class="grid__col grid__col--mb-12 d-flex justify-fe">
+							<span class="show-more show-more--plus bg-gray10 color-gray600 has-dropdown" data-dropdown="calendardropdown">+</span>
+						</div>
+					</div>
+					<nav class="dropdown-menu dropdown-menu--content" id="calendardropdown"> 			
+						<ul>
+							<li><a href="#">More Details</a></li>
+							<li><a href="#">View Report</a></li>
+							<li><a href="#">Edit Settings</a></li>
+							<li><a href="#">+ Add widget</a></li>
+						</ul>
+					</nav>
+					<div id="taskscalendar"></div>
+				</div>
+				
+				<div class="grid__col grid__col--13 grid__col--margin grid__col--padding bg-white mb0">
+					<div class="grid__row justify-sb">
+						<div class="grid__col grid__col--mb-12">
+							<h3 class="grid__col-title">Diseases Report</h3>
+							<span class="grid__col-subtitle">MOST IMPORTANT</span>
+						</div>
+						<div class="grid__col grid__col--mb-12 d-flex justify-fe">
+							<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="diseasesdropdown"></span>
+						</div>
+					</div>
+					<nav class="dropdown-menu dropdown-menu--content" id="diseasesdropdown"> 			
+						<ul>
+							<li><a href="#">More Details</a></li>
+							<li><a href="#">View Diseases</a></li>
+							<li><a href="#">Edit Settings</a></li>
+							<li><a href="#">+ Add widget</a></li>
+						</ul>
+					</nav>
+					<canvas id="DiseasesChart" width="100%" height="80"></canvas>
+				</div>
+				<div class="grid__col grid__col--13 grid__col--margin grid__col--padding bg-white mb0">
+					<div class="grid__row justify-sb">
+						<div class="grid__col grid__col--mb-12">
+							<h3 class="grid__col-title">Latest Reports</h3>
+							<span class="grid__col-subtitle">LAST 7 DAYS</span>
+						</div>
+						<div class="grid__col grid__col--mb-12 d-flex justify-fe">
+							<span class="show-more show-more--arrow color-gray600 has-dropdown" data-dropdown="reportsdropdown"></span>
+						</div>
+					</div>
+					<nav class="dropdown-menu dropdown-menu--content" id="reportsdropdown"> 			
+						<ul>
+							<li><a href="#">More Details</a></li>
+							<li><a href="#">View Report</a></li>
+							<li><a href="#">Edit Settings</a></li>
+							<li><a href="#">+ Add widget</a></li>
+						</ul>
+					</nav>
+					<canvas id="ReportsChart" width="100%" height="40"></canvas>
+					<div class="table table--no-header table--latest-reports">
+						<div class="table__body">
+							<div class="table__row">
+								<div class="table__cell">Infectious disease.pdf</div>
+								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
+								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
+							</div>
+							<div class="table__row">
+								<div class="table__cell">Paediatric.doc</div>
+								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
+								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
+							</div>
+							<div class="table__row">
+								<div class="table__cell">Hepatology.pdf</div>
+								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
+								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
+							</div>
+							<div class="table__row">
+								<div class="table__cell">General Surgery.doc</div>
+								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
+								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
+							</div>
+						</div>
+						
+					</div>
+					<!-- TABLE end -->
+
+				</div>
+
+			</div>
+			
+	
+
+		</div>
+
+
+
+	</div>
+	
+   
+</div>  <!-- Wrap End -->
+ 
+<div class="section section-panel" id="panel">
+	<div class="panel-resize"></div>
+	<div class="section-panel__content scrollbar-macosx">
+		
+
+		<div class="grid">
+			
+		        <div class="grid__row">	
+				<div class="grid__col grid__col--padding">
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<h3 class="grid__col-title">Settings Panel</h3>
+						</div>		
+					</div>
+					<div class="grid__row align-c">
+						<div class="grid__col grid__col--mb-12 grid__col--margin">
+							<label class="form__label pb0">ENABLED OPTION</label>
+						</div>
+						<div class="grid__col grid__col--mb-12 grid__col--margin">
+							<div class="form__switcher">
+								<label class="switch">
+								<input class="switch__input" type="checkbox" data-role="none" checked />
+								<span class="switch__label" data-on="On" data-off="Off"></span> <span class="switch__handle"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="grid__row align-c">
+						<div class="grid__col grid__col--mb-12 grid__col--margin">
+							<label class="form__label pb0">DISABLED OPTION</label>
+						</div>
+						<div class="grid__col grid__col--mb-12 grid__col--margin">
+							<div class="form__switcher">
+								<label class="switch">
+								<input class="switch__input" type="checkbox" data-role="none"/>
+								<span class="switch__label" data-on="On" data-off="Off"></span> <span class="switch__handle"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="grid__row align-c">
+						<div class="grid__col grid__col--mb-12 grid__col--margin">
+							<label class="form__label pb0">ENABLED OPTION</label>
+						</div>
+						<div class="grid__col grid__col--mb-12 grid__col--margin">
+							<div class="form__switcher">
+								<label class="switch">
+								<input class="switch__input" type="checkbox" data-role="none" checked />
+								<span class="switch__label" data-on="On" data-off="Off"></span> <span class="switch__handle"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="grid__row align-c">
+						<div class="grid__col grid__col--mb-12 grid__col--margin">
+							<label class="form__label pb0">DISABLED OPTION</label>
+						</div>
+						<div class="grid__col grid__col--mb-12 grid__col--margin">
+							<div class="form__switcher">
+								<label class="switch">
+								<input class="switch__input" type="checkbox" data-role="none"/>
+								<span class="switch__label" data-on="On" data-off="Off"></span> <span class="switch__handle"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<h3 class="grid__col-title">Custom radios</h3>
+						</div>		
+					</div>
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<label class="form__label">CUSTOM RADIO SETTINGS</label>
+							<div class="form__radio">
+								<input type="radio" name="cr" id="cr1" value="1" checked /><label for="cr1">Radio option</label>
+							</div>
+							<div class="form__radio">
+								<input type="radio" name="cr" id="cr2" value="2" /><label for="cr2">Radio option</label>
+							</div>
+							<div class="form__radio">
+								<input type="radio" name="cr" id="cr3" value="3" /><label for="cr3">Radio option</label>
+							</div>
+						</div>
+					</div>
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<h3 class="grid__col-title">Custom checkboxes</h3>
+						</div>		
+					</div>
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<label class="form__label">CUSTOM CHECKBOX SETTINGS</label>
+							<div class="form__checkbox">
+								<input type="checkbox" name="cc1" id="cc1" value="1" checked /><label for="cc1">Checkbox option</label>
+							</div>
+							<div class="form__checkbox">
+								<input type="checkbox" name="cc2" id="cc2" value="2" /><label for="cc2">Checkbox option</label>
+							</div>
+							<div class="form__checkbox">
+								<input type="checkbox" name="cc3" id="cc3" value="3" /><label for="cc3">Checkbox option</label>
+							</div>
+						</div>
+					</div>
+					
+
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<h3 class="grid__col-title">Custom Slider</h3>
+						</div>		
+					</div>
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin">
+							<label class="form__label">CUSTOM SINGLE SLIDER</label>
+								<input type="text" class="js-slider" name="my_range" value="" />
+						</div>
+					</div>
+					<div class="grid__row">
+						<div class="grid__col grid__col--margin mb0">
+							<label class="form__label">CUSTOM RANGE SLIDER</label>
+								<input type="text" class="js-range-slider" name="my_range" value="" />
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div> <!-- End of Grid -->	
+	</div>
+</div>  <!-- End of right panel -->
+ 
+
+ 
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/chartjs-plugin-style.min.js"></script>
+<script src="js/charts-custom-dashboard.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.dashboard-custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', event => {
+
+	// Getting apps
+	axios.get('https://guarded-headland-99483.herokuapp.com/appointments', {
+		headers: {}
+	})
+	.then((response) => {
+		var apps = response.data.data
+		console.log(apps);
+
+		for(let i=0; i<apps.length; i++){
+			
+			let body = document.querySelector('.appointments__content')
+
+			let appDiv = document.createElement('div');
+			appDiv.className = 'appointments__slide swiper-slide'
+
+			let appHeader = document.createElement('div')
+			appHeader.className= 'appointment__header'
+
+			let appHeaderDetails = document.createElement('div')
+			appHeaderDetails.className= 'appointment__header-details'
+
+			let appName = document.createElement('div')
+			appName.className = 'appointment__username'
+
+			let nameNode = document.createTextNode(apps[i].name.name)
+
+			appName.appendChild(nameNode)
+
+			appHeaderDetails.appendChild(appName)
+
+			appHeader.appendChild(appHeaderDetails)
+
+			let appContent =  document.createElement('div')
+			appContent.className = 'appointment__content'
+
+			let appDoctor = document.createElement('div')
+			appDoctor.className = 'appointment__info-content icon-doctor'
+
+			let doctorNode = document.createTextNode(apps[i].doctor.name)
+
+			appDoctor.appendChild(doctorNode)
+
+			let appDate = document.createElement('div')
+			appDate.className = 'appointment__info-content icon-calendar'
+
+			let dateNode = document.createTextNode(apps[i].date)
+
+			appDate.appendChild(dateNode)
+
+			let appTime = document.createElement('div')
+			appTime.className = 'appointment__info-content icon-clock'
+
+			let timeNode = document.createTextNode(apps[i].time)
+
+			appTime.appendChild(timeNode)
+
+			appContent.appendChild(appDoctor);
+
+			appContent.appendChild(appDate);
+
+			appContent.appendChild(appTime);
+
+			appDiv.appendChild(appHeader)
+
+			appDiv.appendChild(appContent)
+
+			body.append(appDiv) 
+		}
+	})
+	.catch((error)=> {
+		console.log(error)
+	})
+
+	axios.get('https://guarded-headland-99483.herokuapp.com/patients', {
+			headers: {}
+		})
+		.then((response) => {
+			var patients = response.data.data
+			var registeredUser = patients.slice(-1)[0]
+			console.log(registeredUser);
+
+			let body = document.querySelector('.content-header__user-avatar')
+			let picdiv = document.createElement('div')
+			picdiv.className="content-header__user-thumb1"
+			let img = document.createElement('img')
+			img.src = registeredUser.image
+			let circ = document.createElement('div');
+			circ.className = "circular2"
+			circ.appendChild(img)
+			picdiv.appendChild(circ)
+
+			let span = document.createElement('span')
+			span.className = "content-header__user-name"
+			let nameTxt = document.createTextNode(registeredUser.name)
+			span.appendChild(nameTxt)
+			body.append(picdiv)
+			body.append(span)
+
+		})
+		.catch((error)=> {
+			console.log(error)
+		})
+
+		
+
+		axios.get('https://guarded-headland-99483.herokuapp.com/patients/count', {
+			headers: {}
+		})
+		.then((response) => {
+			var patientCount = response.data.data
+			console.log(patientCount)
+
+			let bodyT = document.querySelector('.info-nr1')
+			let textNode = document.createTextNode(patientCount)
+			bodyT.append(textNode)
+		})
+		.catch((error)=> {
+			console.log(error)
+		})
+
+		axios.get('https://guarded-headland-99483.herokuapp.com/patients', {
+			headers: {}
+		})
+		.then((response) => {
+			var patients = response.data.data
+			var trimmedPat = patients.slice(0,3)
+			console.log(trimmedPat);
+
+			for(let i=0; i<patients.length; i++){
+				let tablerow = document.createElement('div');
+				tablerow.className = "table__row"
+
+				let body = document.querySelector('.table__body')
+
+				let cell1 = document.createElement('div');
+				cell1.className = "table__cell"
+
+				let circ = document.createElement('div');
+				circ.className = "circular3"
+
+				let img = document.createElement('img');
+				img.src = trimmedPat[i].image
+
+				circ.appendChild(img)
+
+				cell1.appendChild(circ)
+
+				let cell2 = document.createElement('div');
+				cell2.className = "table__cell"
+
+				let celltxt = document.createTextNode(trimmedPat[i].name)
+				cell2.appendChild(celltxt)
+
+				cell1.appendChild(cell2)
+
+				tablerow.appendChild(cell1); 
+				tablerow.appendChild(cell2);
+
+				body.append(tablerow) 
+			}
+		})
+		.catch((error)=> {
+			console.log(error)
+		})
+
+	})
+</script>
+</body>
+
+<!-- Mirrored from smarttemplates.net/medikit/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:24 GMT -->
+</html>
